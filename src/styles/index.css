@@ -1,0 +1,60 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy-950: #041628;
+    --navy-900: #072444;
+    --navy-800: #0B335E;
+    --teal-700: #0C726B;
+    --teal-600: #0D8B83;
+    --teal-500: #11A59C;
+    --mint-50: #F4FBF9;
+    --mint-100: #E7F7F3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Ensure accessible touch target sizes */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Subtle editorial gradient surfaces */
+.surface-light-mint {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4FBF9 100%);
+}
+
+.surface-soft-green {
+  background: linear-gradient(135deg, #F0FAF7 0%, #E7F7F3 100%);
+}
+
+.surface-deep-navy {
+  background: linear-gradient(135deg, #072444 0%, #041628 100%);
+}
+
+/* Restrained, elegant focus rings for accessibility */
+*:focus-visible {
+  outline: 2px solid #0D8B83;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
