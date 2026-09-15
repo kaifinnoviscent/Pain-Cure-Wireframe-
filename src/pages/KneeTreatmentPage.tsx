@@ -1,17 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Activity, Stethoscope } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Activity, Stethoscope, CheckCircle2 } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ConsultationCTA } from '../components/ConsultationCTA';
+import { TREATMENTS } from '../data/clinicalData';
 import kneeImg from '../assets/knee-treatment.jpg';
 
 export const KneeTreatmentPage: React.FC = () => {
-  const nonOperativeModalities = [
-    'ERP / ozone',
-    'IR Lamp',
-    'Physiotherapy',
-  ];
+  const knee = TREATMENTS.find((t) => t.id === 'knee')!;
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -38,13 +35,13 @@ export const KneeTreatmentPage: React.FC = () => {
               
               <div className="lg:col-span-7">
                 <span className="text-xs sm:text-sm font-bold tracking-widest text-teal-800 uppercase block mb-3">
-                  Category 02 • Knee Care
+                  {knee.number} &bull; {knee.disciplineLabel}
                 </span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight mb-6">
-                  Knee Treatment
+                  {knee.name}
                 </h1>
                 <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal mb-8">
-                  Knee care pathways encompassing non-operative modalities and operative intervention based on clinical evaluation.
+                  {knee.whatItIs}
                 </p>
 
                 <div className="flex flex-wrap gap-4">
@@ -80,8 +77,38 @@ export const KneeTreatmentPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pathways Section: Editorial separation of Non-Operative & Operative */}
-        <section id="care-pathways" className="py-16 sm:py-24 bg-slate-50/50 border-t border-slate-200/80">
+        {/* SECTION 1: What It Addresses */}
+        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                What It Addresses
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                Knee Conditions &amp; Symptoms Evaluated
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
+                {knee.whoItIsFor}
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  'Joint pain and localized stiffness',
+                  'Discomfort with walking or weight-bearing',
+                  'Reduced range of movement and knee flexion',
+                  'Degenerative joint changes and wear',
+                ].map((symptom) => (
+                  <div key={symptom} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/80 shadow-xs">
+                    <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
+                    <span className="text-sm font-semibold text-navy-900">{symptom}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 2: Pathways Section */}
+        <section id="care-pathways" className="py-16 sm:py-24 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="max-w-3xl mb-16">
@@ -92,27 +119,30 @@ export const KneeTreatmentPage: React.FC = () => {
                 Non-operative &amp; surgical options.
               </h2>
               <p className="mt-4 text-base text-slate-600 leading-relaxed font-normal">
-                Treatment pathways are evaluated according to individual clinical assessment.
+                {knee.careInvolves}
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
               
-              {/* NON-OPERATIVE PATHWAY (7 cols, soft mint background) */}
+              {/* NON-OPERATIVE PATHWAY */}
               <div className="lg:col-span-7 bg-white border border-teal-100 rounded-2xl p-8 sm:p-12 shadow-xs">
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-teal-50">
                   <Activity className="w-5 h-5 text-teal-600" />
                   <span className="text-xs font-extrabold tracking-widest text-teal-800 uppercase">
-                    Non-Operative Care
+                    Conservative First Line
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-navy-900 tracking-tight mb-6">
+                <h3 className="text-2xl font-bold text-navy-900 tracking-tight mb-3">
                   Non-Operative Modalities
                 </h3>
+                <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                  Non-operative management aims to manage discomfort and support joint mobility without surgery wherever the clinical condition permits.
+                </p>
 
                 <div className="space-y-4">
-                  {nonOperativeModalities.map((item) => (
+                  {knee.nonOperative?.map((item) => (
                     <div
                       key={item}
                       className="p-5 bg-mint-50/50 rounded-xl border border-teal-100/60 flex items-center justify-between"
@@ -128,7 +158,7 @@ export const KneeTreatmentPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* OPERATIVE PATHWAY (5 cols, clean white with navy accents) */}
+              {/* OPERATIVE PATHWAY */}
               <div className="lg:col-span-5 bg-white border border-slate-200/90 rounded-2xl p-8 sm:p-12 shadow-xs flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
@@ -138,9 +168,12 @@ export const KneeTreatmentPage: React.FC = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-navy-900 tracking-tight mb-4">
+                  <h3 className="text-2xl font-bold text-navy-900 tracking-tight mb-3">
                     Operative Pathway
                   </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                    When conservative measures are insufficient and joint wear is localized, operative intervention is considered.
+                  </p>
 
                   <div className="p-6 bg-slate-50 rounded-xl border border-slate-200 mb-6">
                     <span className="text-xs font-bold text-teal-700 uppercase tracking-wider block mb-2">
@@ -149,10 +182,13 @@ export const KneeTreatmentPage: React.FC = () => {
                     <h4 className="text-lg font-bold text-navy-900">
                       Unicondylar knee replacement
                     </h4>
+                    <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                      Partial knee replacement targeting the affected compartment of the knee joint. Supported by in-house post-operative rehabilitation.
+                    </p>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-slate-100">
+                <div className="mt-4 pt-6 border-t border-slate-100">
                   <Link
                     to="/contact"
                     className="inline-flex items-center gap-2 text-sm font-bold text-teal-700 hover:text-teal-800 group"
@@ -168,6 +204,26 @@ export const KneeTreatmentPage: React.FC = () => {
           </div>
         </section>
 
+        {/* SECTION 3: What to Expect */}
+        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                Patient Guidance
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
+                What to Expect
+              </h2>
+              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                <p>{knee.patientExpectation}</p>
+                <p>
+                  Whether managed conservatively or through surgical replacement, rehabilitation is focused on restoring joint function and helping you resume daily activities with confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Consultation Section */}
         <ConsultationCTA />
       </main>
@@ -176,3 +232,4 @@ export const KneeTreatmentPage: React.FC = () => {
     </div>
   );
 };
+

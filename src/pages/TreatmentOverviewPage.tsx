@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { CLINIC_INFO } from '../data/clinicalData';
+import { CLINIC_INFO, TREATMENTS } from '../data/clinicalData';
 import spineImg from '../assets/spine-care.jpg';
 import kneeImg from '../assets/knee-treatment.jpg';
 import hipImg from '../assets/hip-treatment.jpg';
@@ -13,6 +13,12 @@ import physioImg from '../assets/physiotherapy.jpg';
 import rehabImg from '../assets/post-op-rehab.jpg';
 
 export const TreatmentOverviewPage: React.FC = () => {
+  const spine = TREATMENTS.find((t) => t.id === 'spine')!;
+  const knee = TREATMENTS.find((t) => t.id === 'knee')!;
+  const hip = TREATMENTS.find((t) => t.id === 'hip')!;
+  const joints = TREATMENTS.find((t) => t.id === 'joints')!;
+  const sports = TREATMENTS.find((t) => t.id === 'sports-injury')!;
+  const physio = TREATMENTS.find((t) => t.id === 'physiotherapy')!;
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
@@ -68,7 +74,7 @@ export const TreatmentOverviewPage: React.FC = () => {
             
             <div className="flex items-center gap-4 mb-4">
               <span className="text-sm font-mono font-bold tracking-widest text-teal-800 uppercase">
-                01 &bull; SPINE
+                01 &bull; {spine.disciplineLabel}
               </span>
               <div className="h-px w-16 bg-teal-700/30" />
             </div>
@@ -76,9 +82,12 @@ export const TreatmentOverviewPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               
               <div className="lg:col-span-7">
-                <h2 className="text-3xl sm:text-5xl font-extrabold text-navy-900 tracking-tight leading-tight mb-6">
+                <h2 className="text-3xl sm:text-5xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
                   Spine Care
                 </h2>
+                <p className="text-base text-slate-600 leading-relaxed font-normal mb-8 max-w-2xl">
+                  {spine.description}
+                </p>
 
                 {/* Prominent Conditions List (Large, Confident Type) */}
                 <div className="mb-10">
@@ -162,14 +171,17 @@ export const TreatmentOverviewPage: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-4 mb-3">
                     <span className="text-sm font-mono font-bold tracking-widest text-teal-800 uppercase">
-                      02 &bull; KNEE
+                      02 &bull; {knee.disciplineLabel}
                     </span>
                     <div className="h-px w-12 bg-teal-700/30" />
                   </div>
 
-                  <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-6">
+                  <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
                     Knee Treatment
                   </h2>
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
+                    {knee.description}
+                  </p>
 
                   <div className="mb-8 space-y-6">
                     <div>
@@ -227,14 +239,17 @@ export const TreatmentOverviewPage: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-4 mb-3">
                     <span className="text-sm font-mono font-bold tracking-widest text-teal-800 uppercase">
-                      03 &bull; HIP
+                      03 &bull; {hip.disciplineLabel}
                     </span>
                     <div className="h-px w-12 bg-teal-700/30" />
                   </div>
 
-                  <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-6">
+                  <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
                     Hip Treatment
                   </h2>
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
+                    {hip.description}
+                  </p>
 
                   <div className="mb-8 space-y-6">
                     <div>
@@ -291,13 +306,16 @@ export const TreatmentOverviewPage: React.FC = () => {
               <div className="flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-mono font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                    04 &bull; JOINTS
+                    04 &bull; {joints.disciplineLabel}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-3">
                     Peripheral Joints
                   </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal mb-6">
+                    {joints.description}
+                  </p>
 
-                  <div className="mb-8 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+                  <div className="mb-6 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
                     <img
                       src={jointsImg}
                       alt="Joint care clinical assessment at Pain Cure clinic"
@@ -307,13 +325,15 @@ export const TreatmentOverviewPage: React.FC = () => {
                     />
                   </div>
 
-                  <div className="space-y-3 mb-8">
-                    {['Shoulder', 'Wrist', 'Ankle', 'Elbow', 'Hand', 'Foot'].map((j) => (
-                      <div key={j} className="flex items-center gap-3">
-                        <span className="w-2 h-2 rounded-full bg-teal-600 shrink-0" />
-                        <span className="text-base font-semibold text-navy-900">{j}</span>
-                      </div>
-                    ))}
+                  <div className="space-y-2 mb-6">
+                    <span className="text-xs font-bold text-navy-900 block mb-1">Joint regions evaluated:</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {joints.areas?.map((j) => (
+                        <span key={j} className="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-navy-900">
+                          {j}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
@@ -330,23 +350,28 @@ export const TreatmentOverviewPage: React.FC = () => {
               <div className="flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-mono font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                    05 &bull; SPORTS INJURY
+                    05 &bull; {sports.disciplineLabel}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-3">
                     Sports Injury
                   </h3>
-                  <p className="text-base text-slate-600 leading-relaxed font-normal mb-6">
-                    Dedicated in-house rehabilitation and clinical care for sports-related injuries.
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal mb-6">
+                    {sports.description}
                   </p>
 
                   <div className="mb-6 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
                     <img
                       src={sportsImg}
                       alt="Sports injury physical rehabilitation"
-                      className="w-full h-[240px] sm:h-[260px] object-cover"
+                      className="w-full h-[200px] object-cover"
                       width="400"
-                      height="260"
+                      height="200"
                     />
+                  </div>
+
+                  <div className="p-4 bg-white rounded-xl border border-slate-200/80 mb-6 text-xs text-slate-600">
+                    <span className="font-bold text-navy-900 block mb-0.5">Clinical Focus:</span>
+                    In-house rehabilitation tailored to acute injury assessment and progressive functional movement recovery.
                   </div>
                 </div>
 
@@ -363,13 +388,16 @@ export const TreatmentOverviewPage: React.FC = () => {
               <div className="flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-mono font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                    06 &bull; PHYSIOTHERAPY
+                    06 &bull; {physio.disciplineLabel}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-3">
                     Physiotherapy
                   </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal mb-6">
+                    {physio.description}
+                  </p>
 
-                  <div className="mb-8 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+                  <div className="mb-6 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
                     <img
                       src={physioImg}
                       alt="Physiotherapy modalities at Pain Cure clinic"
@@ -379,21 +407,15 @@ export const TreatmentOverviewPage: React.FC = () => {
                     />
                   </div>
 
-                  <div className="space-y-3 mb-8">
-                    {[
-                      { num: '01', name: 'IFT' },
-                      { num: '02', name: 'TENS' },
-                      { num: '03', name: 'SWD / Short Wave Diathermy' },
-                      { num: '04', name: 'Ultrasound therapy' },
-                      { num: '05', name: 'Theraband' },
-                    ].map((m) => (
-                      <div key={m.num} className="flex items-center gap-3">
-                        <span className="text-xs font-mono font-bold text-teal-700 shrink-0 w-6">
-                          {m.num}
+                  <div className="space-y-2 mb-6">
+                    <span className="text-xs font-bold text-navy-900 block mb-1">Approved clinical modalities:</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {physio.modalities?.map((m) => (
+                        <span key={m} className="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-navy-900">
+                          {m}
                         </span>
-                        <span className="text-base font-semibold text-navy-900">{m.name}</span>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
 
@@ -425,18 +447,27 @@ export const TreatmentOverviewPage: React.FC = () => {
                 <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
                   In-house Post Operative Rehab
                 </h2>
-                <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-8 max-w-xl">
-                  Recovery care following orthopaedic procedures is supported through in-house rehabilitation at Pain Cure clinic.
-                </p>
+                <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-8 max-w-xl">
+                  <p>
+                    Orthopaedic surgery provides the surgical repair or joint reconstruction, but functional recovery depends on guided post-operative rehabilitation.
+                  </p>
+                  <p>
+                    Pain Cure provides supervised in-house rehabilitation tailored to each patient's procedure and recovery pace, supporting steady restoration of movement and daily independence.
+                  </p>
+                </div>
 
                 <div className="space-y-3 mb-10">
                   <div className="flex items-center gap-3">
                     <span className="w-2.5 h-2.5 rounded-full bg-teal-400 shrink-0" />
-                    <span className="text-slate-200 font-medium text-base">In-house Post Operative Rehab</span>
+                    <span className="text-slate-200 font-medium text-base">Supervised rehabilitation following orthopaedic procedures</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-2.5 h-2.5 rounded-full bg-teal-400 shrink-0" />
-                    <span className="text-slate-200 font-medium text-base">Focused on returning patients to everyday movement</span>
+                    <span className="text-slate-200 font-medium text-base">Care tailored to the individual's surgical pathway and healing pace</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2.5 h-2.5 rounded-full bg-teal-400 shrink-0" />
+                    <span className="text-slate-200 font-medium text-base">Focused on progressive restoration of movement, strength, and function</span>
                   </div>
                 </div>
 

@@ -34,15 +34,14 @@ export const AboutPage: React.FC = () => {
     const animObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          setVisibleSections((prev) => {
-            const next = new Set(prev);
-            if (entry.isIntersecting) {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => {
+              const next = new Set(prev);
               next.add(entry.target.id);
-            } else {
-              next.delete(entry.target.id);
-            }
-            return next;
-          });
+              return next;
+            });
+            animObserver.unobserve(entry.target);
+          }
         });
       },
       {

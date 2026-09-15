@@ -50,6 +50,83 @@
   outline-offset: 2px;
 }
 
+/* Touch feedback utility */
+.touch-press {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s ease;
+}
+.touch-press:active {
+  transform: scale(0.985);
+}
+
+/* Hide scrollbar for clean horizontal swipe containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hero Entrance Keyframes */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-hero-fade-up {
+  animation: hero-fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-fade-in {
+  animation: hero-fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Hero Image Entrance Keyframe */
+@keyframes hero-img-reveal {
+  from {
+    opacity: 0;
+    transform: scale(1.025);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-hero-img-reveal {
+  animation: hero-img-reveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Smooth Image Zoom on Hover/Focus */
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom-target {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.group:hover .img-zoom-target,
+.group:focus-within .img-zoom-target {
+  transform: scale(1.025);
+}
+
 /* About page — mobile chapter title entrance animation */
 @keyframes about-chapter-title-enter {
   from { opacity: 0; transform: translateY(5px); }
@@ -67,3 +144,5 @@
     scroll-behavior: auto !important;
   }
 }
+
+

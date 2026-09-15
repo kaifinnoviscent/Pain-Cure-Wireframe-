@@ -1,19 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ConsultationCTA } from '../components/ConsultationCTA';
+import { TREATMENTS, PHYSIOTHERAPY_MODALITIES } from '../data/clinicalData';
 import physioImg from '../assets/physiotherapy.jpg';
 
 export const PhysiotherapyPage: React.FC = () => {
-  const modalities = [
-    { num: '01', name: 'IFT' },
-    { num: '02', name: 'TENS' },
-    { num: '03', name: 'SWD / Short Wave Diathermy' },
-    { num: '04', name: 'Ultrasound therapy' },
-    { num: '05', name: 'Theraband' },
-  ];
+  const physio = TREATMENTS.find((t) => t.id === 'physiotherapy')!;
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -40,13 +35,13 @@ export const PhysiotherapyPage: React.FC = () => {
               
               <div className="lg:col-span-7">
                 <span className="text-xs sm:text-sm font-bold tracking-widest text-teal-800 uppercase block mb-3">
-                  Category 06 • Physical Modalities
+                  {physio.number} &bull; {physio.disciplineLabel}
                 </span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight mb-6">
-                  Physiotherapy
+                  {physio.name}
                 </h1>
                 <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal mb-8">
-                  Clinical physiotherapy modalities provided as part of integrated orthopaedic and rehabilitation care.
+                  {physio.whatItIs}
                 </p>
 
                 <div className="flex flex-wrap gap-4">
@@ -61,7 +56,7 @@ export const PhysiotherapyPage: React.FC = () => {
                     href="#modalities-list"
                     className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-navy-900 font-semibold px-6 py-3.5 rounded-lg border border-slate-300 transition-all duration-150 text-sm sm:text-base"
                   >
-                    <span>View Modalities</span>
+                    <span>View Approved Modalities</span>
                   </a>
                 </div>
               </div>
@@ -82,39 +77,115 @@ export const PhysiotherapyPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Modalities Section: Editorial Highlight of 5 Modalities with Zero Invented Descriptions */}
-        <section id="modalities-list" className="py-16 sm:py-24 bg-slate-50/60 border-t border-slate-200/80">
+        {/* SECTION 1: What It Addresses */}
+        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                Clinical Focus
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                When Physiotherapy Is Recommended
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
+                {physio.whoItIsFor}
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  'Post-operative rehabilitation following orthopaedic procedures',
+                  'Conservative management of joint pain and stiffness',
+                  'Recovery from sports and musculoskeletal injuries',
+                  'Restoration of functional movement, balance, and strength',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/80 shadow-xs">
+                    <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
+                    <span className="text-sm font-semibold text-navy-900">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 2: Approved Modalities — Detailed Clinical Explanation */}
+        <section id="modalities-list" className="py-16 sm:py-24 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="max-w-3xl mb-16">
+            <div className="max-w-3xl mb-14">
               <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                Clinical Modalities
+                Approved Modalities
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
-                Modalities Offered
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mb-4">
+                Clinical Modalities &amp; Their Purpose
               </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                {physio.careInvolves}
+              </p>
             </div>
 
-            {/* Editorial Stacked List with Generous Spacing */}
-            <div className="bg-white border border-slate-200/90 rounded-2xl divide-y divide-slate-100 shadow-xs max-w-4xl">
-              {modalities.map((item) => (
-                <div key={item.num} className="p-6 sm:p-8 flex items-center justify-between">
-                  <div className="flex items-center gap-5">
-                    <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0 text-teal-800 font-bold text-sm">
-                      {item.num}
+            <div className="space-y-6 max-w-4xl">
+              {PHYSIOTHERAPY_MODALITIES.map((mod, index) => (
+                <div
+                  key={mod.id}
+                  className="p-7 sm:p-8 bg-slate-50/70 rounded-2xl border border-slate-200/90 shadow-xs"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-200 mb-4">
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-lg bg-teal-50 border border-teal-200 text-teal-800 font-mono font-bold text-xs flex items-center justify-center">
+                        0{index + 1}
+                      </span>
+                      <div>
+                        <h3 className="text-xl font-bold text-navy-900">
+                          {mod.name}
+                        </h3>
+                        <span className="text-xs text-slate-500 font-medium">
+                          {mod.fullName}
+                        </span>
+                      </div>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-navy-900">
-                      {item.name}
-                    </h3>
+                    <span className="inline-block self-start sm:self-auto px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-semibold text-teal-800">
+                      Approved Clinical Modality
+                    </span>
                   </div>
 
-                  <span className="hidden sm:inline-block px-3.5 py-1.5 bg-slate-50 border border-slate-200 rounded-full text-xs font-semibold text-slate-600">
-                    Clinical Modality
-                  </span>
+                  <div className="space-y-3.5 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    <div>
+                      <span className="font-bold text-navy-900 block mb-0.5 text-xs">What it is:</span>
+                      <p>{mod.whatItIs}</p>
+                    </div>
+                    <div>
+                      <span className="font-bold text-navy-900 block mb-0.5 text-xs">General clinical use:</span>
+                      <p>{mod.generalUse}</p>
+                    </div>
+                    <div>
+                      <span className="font-bold text-navy-900 block mb-0.5 text-xs">Role in rehabilitation:</span>
+                      <p>{mod.rehabilitationRole}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
 
+          </div>
+        </section>
+
+        {/* SECTION 3: What to Expect */}
+        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                Patient Guidance
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
+                What to Expect
+              </h2>
+              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                <p>{physio.patientExpectation}</p>
+                <p>
+                  Modalities are never applied blindly; they are selected to complement active exercise and rehabilitation according to your individual assessment.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -126,3 +197,4 @@ export const PhysiotherapyPage: React.FC = () => {
     </div>
   );
 };
+
