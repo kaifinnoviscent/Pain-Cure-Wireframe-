@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -48,6 +48,15 @@
 *:focus-visible {
   outline: 2px solid #0D8B83;
   outline-offset: 2px;
+}
+
+/* About page — mobile chapter title entrance animation */
+@keyframes about-chapter-title-enter {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.about-chapter-title-enter {
+  animation: about-chapter-title-enter 0.25s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {

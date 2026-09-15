@@ -83,3 +83,79 @@ export const CLINIC_INFO = {
     timings: '[Consultation Timings / Days]',
   }
 };
+
+export interface DoctorStatistic {
+  value: string;
+  label: string;
+  detail?: string;
+}
+
+export interface ExpertiseGroup {
+  title: string;
+  items: string[];
+}
+
+export interface DoctorProfile {
+  name: string;
+  title: string;
+  subtitle: string;
+  experience: string;
+  statistics: DoctorStatistic[];
+  bioParagraphs: string[];
+  expertiseGroups: ExpertiseGroup[];
+  philosophy: string;
+}
+
+export const DOCTOR_PROFILE: DoctorProfile = {
+  name: 'Dr. Mohsin Merchant',
+  title: 'Consultant Orthopedic Surgeon',
+  subtitle: 'Spine & Nerve Pain Specialist',
+  experience: 'Over 15 years of experience in orthopedic and spine care',
+  statistics: [
+    {
+      value: '15+ Years',
+      label: 'Orthopedic & Spine Care',
+    },
+    {
+      value: '>2,000',
+      label: 'Spine Surgeries',
+    },
+    {
+      value: '>4,000',
+      label: 'Knee Replacement Surgeries',
+      detail: 'Including robotic-assisted knee replacement procedures',
+    },
+  ],
+  bioParagraphs: [
+    'Dr. Mohsin Merchant is a Consultant Orthopedic Surgeon with over 15 years of experience in orthopedic and spine care. His practice covers a wide range of orthopedic, spinal, joint and sports-related conditions, with an emphasis on personalized, evidence-based care.',
+    'With more than 2,000 spine surgeries and more than 4,000 knee replacement surgeries, including robotic-assisted procedures, Dr. Merchant brings extensive surgical experience to the management of complex orthopedic and spine conditions.',
+    'His approach increasingly emphasizes conservative and non-surgical management of spine and nerve pain wherever appropriate, with the aim of helping patients avoid surgery when it is not necessary.',
+  ],
+  expertiseGroups: [
+    {
+      title: 'SPINE & NERVE PAIN',
+      items: [
+        'Spine care and nerve-related pain',
+        'Conservative and non-surgical spine treatment',
+      ],
+    },
+    {
+      title: 'KNEE & JOINTS',
+      items: [
+        'Knee replacement surgery, including robotic-assisted knee replacement',
+        'Arthritis and degenerative joint conditions',
+      ],
+    },
+    {
+      title: 'TRAUMA & SPORTS',
+      items: [
+        'Fracture and trauma surgery',
+        'Arthroscopic ACL and meniscus surgery',
+        'Shoulder surgery',
+        'Sports injury management',
+      ],
+    },
+  ],
+  philosophy:
+    'Dr. Mohsin Merchant combines extensive surgical experience with a modern, patient-centered approach, with a focus on choosing the right treatment for each patient—surgical or non-surgical.',
+};
