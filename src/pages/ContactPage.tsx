@@ -92,25 +92,57 @@ export const ContactPage: React.FC = () => {
         </div>
 
         {/* Section 1: Hero & Primary Verified Contact Channels */}
-        <section className="py-8 sm:py-12 lg:py-14 bg-white">
+        <section className="py-8 sm:py-10 lg:py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Editorial Hero Introduction */}
-            <div className="mb-8 sm:mb-10 lg:mb-12 animate-hero-fade-up">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 border border-teal-200/80 mb-3.5 sm:mb-4">
+            {/* Centered Editorial Hero Panel with Layered Color Depth */}
+            <div className="max-w-4xl mx-auto mb-8 sm:mb-10 lg:mb-12 relative overflow-hidden rounded-2xl sm:rounded-3xl border border-teal-200/90 ring-1 ring-inset ring-white/90 bg-gradient-to-b from-teal-50/70 via-mint-50/40 to-slate-50/70 p-6 sm:p-10 lg:p-12 text-center shadow-[0_4px_24px_-4px_rgba(7,36,68,0.06),0_1px_3px_rgba(7,36,68,0.04)] hover:shadow-[0_8px_30px_-4px_rgba(7,36,68,0.08),0_2px_6px_rgba(7,36,68,0.04)] hover:border-teal-300/90 transition-all duration-300 animate-contact-panel group/panel">
+              
+              {/* Subtle top-center soft teal atmospheric glow */}
+              <div 
+                className="absolute -top-20 left-1/2 -translate-x-1/2 w-[520px] h-[220px] bg-gradient-to-b from-teal-400/15 via-teal-300/10 to-transparent rounded-full blur-3xl pointer-events-none" 
+                aria-hidden="true" 
+              />
+
+              {/* Faint subtle corner depth washes */}
+              <div 
+                className="absolute -bottom-16 -right-10 w-72 h-48 bg-navy-900/[0.03] rounded-full blur-2xl pointer-events-none" 
+                aria-hidden="true" 
+              />
+              <div 
+                className="absolute -bottom-16 -left-10 w-72 h-48 bg-teal-600/[0.03] rounded-full blur-2xl pointer-events-none" 
+                aria-hidden="true" 
+              />
+              
+              {/* Corner Geometric Framing Accents (Pure CSS, integrated teal framing) */}
+              <div className="absolute top-3.5 left-3.5 w-3 h-3 border-t-2 border-l-2 border-teal-600/50 rounded-tl pointer-events-none transition-colors group-hover/panel:border-teal-600/70" aria-hidden="true" />
+              <div className="absolute top-3.5 right-3.5 w-3 h-3 border-t-2 border-r-2 border-teal-600/50 rounded-tr pointer-events-none transition-colors group-hover/panel:border-teal-600/70" aria-hidden="true" />
+              <div className="absolute bottom-3.5 left-3.5 w-3 h-3 border-b-2 border-l-2 border-teal-600/50 rounded-bl pointer-events-none transition-colors group-hover/panel:border-teal-600/70" aria-hidden="true" />
+              <div className="absolute bottom-3.5 right-3.5 w-3 h-3 border-b-2 border-r-2 border-teal-600/50 rounded-br pointer-events-none transition-colors group-hover/panel:border-teal-600/70" aria-hidden="true" />
+
+              {/* Eyebrow */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-white/95 backdrop-blur-xs border border-teal-200/90 mb-4 sm:mb-5 shadow-2xs relative z-10 animate-contact-eyebrow">
                 <span className="w-2 h-2 rounded-full bg-teal-600" aria-hidden="true" />
                 <span className="text-xs font-mono font-bold tracking-widest text-teal-800 uppercase">
                   CONTACT &amp; INQUIRIES
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-[1.12] mb-4">
+              {/* Centered H1 Headline */}
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-[1.12] mb-4 sm:mb-5 text-balance relative z-10 animate-contact-h1">
                 Let's talk about your care.
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-3xl">
+              {/* Centered Supporting Copy */}
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto text-balance relative z-10 animate-contact-copy">
                 Whether you have questions regarding persistent joint discomfort, require an orthopaedic evaluation, or wish to schedule structured post-operative rehabilitation, our clinic team is here to assist. Reach out directly by telephone or visit our outpatient facility in Mazgaon.
               </p>
+
+              {/* Single Subtle Centered Teal Horizontal Accent Rule */}
+              <div 
+                className="h-0.5 w-20 sm:w-24 bg-gradient-to-r from-teal-500/10 via-teal-600 to-teal-500/10 mx-auto mt-6 sm:mt-7 rounded-full relative z-10 animate-contact-accent" 
+                aria-hidden="true" 
+              />
             </div>
 
             {/* ONE Primary Verified Contact Cards Grid */}

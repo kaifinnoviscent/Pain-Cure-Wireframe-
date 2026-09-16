@@ -29,13 +29,13 @@ export const Footer: React.FC = () => {
           
           {/* Brand & Clinic Statement (5 cols) */}
           <div className="md:col-span-5 space-y-6">
-            <Link to="/" className="inline-block bg-white p-3 rounded-xl" aria-label="Pain Cure Home">
+            <Link to="/" className="inline-block bg-white p-4 sm:p-5 rounded-2xl shadow-sm" aria-label="Pain Cure Home">
               <img
                 src={logoUrl}
                 alt="Pain Cure Ortho &amp; Rehab Clinic"
-                className="h-12 sm:h-14 w-auto object-contain"
-                width="160"
-                height="108"
+                className="h-16 sm:h-[72px] w-auto object-contain"
+                width="180"
+                height="122"
               />
             </Link>
             

@@ -100,11 +100,11 @@ export const Header: React.FC = () => {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-200 bg-white/98 backdrop-blur-md ${
           isScrolled
-            ? 'border-b border-slate-200 shadow-sm py-3.5'
-            : 'border-b border-slate-200/70 py-4 sm:py-5'
+            ? 'border-b border-slate-200 shadow-sm py-2.5 sm:py-3'
+            : 'border-b border-slate-200/70 py-3 sm:py-3.5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[52px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[58px] sm:min-h-[68px] md:min-h-[76px]">
           {/* Logo & Brand Identity */}
           <Link
             to="/"
@@ -114,9 +114,9 @@ export const Header: React.FC = () => {
             <img
               src={logoUrl}
               alt="Pain Cure Ortho & Rehab Clinic"
-              className="h-11 sm:h-13 md:h-14 w-auto object-contain transition-transform group-hover:scale-[1.01]"
-              width="160"
-              height="108"
+              className="h-[54px] sm:h-[64px] md:h-[72px] w-auto object-contain transition-transform group-hover:scale-[1.01]"
+              width="180"
+              height="122"
             />
           </Link>
 
