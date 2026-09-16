@@ -91,12 +91,12 @@ export const ContactPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Section 1: Compact Introduction & Primary Verified Contact Channels */}
-        <section className="py-10 sm:py-14 lg:py-16 bg-white">
+        {/* Section 1: Hero & Primary Verified Contact Channels */}
+        <section className="py-8 sm:py-12 lg:py-14 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            {/* Compact Introduction */}
-            <div className="max-w-3xl mb-8 sm:mb-10 animate-hero-fade-up">
+            {/* Editorial Hero Introduction */}
+            <div className="mb-8 sm:mb-10 lg:mb-12 animate-hero-fade-up">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 border border-teal-200/80 mb-3.5 sm:mb-4">
                 <span className="w-2 h-2 rounded-full bg-teal-600" aria-hidden="true" />
                 <span className="text-xs font-mono font-bold tracking-widest text-teal-800 uppercase">
@@ -108,7 +108,7 @@ export const ContactPage: React.FC = () => {
                 Let's talk about your care.
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-3xl">
                 Whether you have questions regarding persistent joint discomfort, require an orthopaedic evaluation, or wish to schedule structured post-operative rehabilitation, our clinic team is here to assist. Reach out directly by telephone or visit our outpatient facility in Mazgaon.
               </p>
             </div>

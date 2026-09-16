@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Instagram, Shield } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicalData';
-import logoUrl from '../assets/pain-cure-logo.png';
+const logoUrl = '/Pain Cure.png';
 
 export const Footer: React.FC = () => {
   const treatments = [
@@ -34,8 +34,8 @@ export const Footer: React.FC = () => {
                 src={logoUrl}
                 alt="Pain Cure Ortho &amp; Rehab Clinic"
                 className="h-12 sm:h-14 w-auto object-contain"
-                width="190"
-                height="64"
+                width="160"
+                height="108"
               />
             </Link>
             

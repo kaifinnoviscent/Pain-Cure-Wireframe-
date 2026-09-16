@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, ArrowRight, ChevronDown } from 'lucide-react';
 import { MobileNav } from './MobileNav';
-import logoUrl from '../assets/pain-cure-logo.png';
+const logoUrl = '/Pain Cure.png';
 
 export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -114,9 +114,9 @@ export const Header: React.FC = () => {
             <img
               src={logoUrl}
               alt="Pain Cure Ortho & Rehab Clinic"
-              className="h-12 sm:h-14 md:h-15 w-auto object-contain transition-transform group-hover:scale-[1.01]"
-              width="200"
-              height="68"
+              className="h-11 sm:h-13 md:h-14 w-auto object-contain transition-transform group-hover:scale-[1.01]"
+              width="160"
+              height="108"
             />
           </Link>
 
