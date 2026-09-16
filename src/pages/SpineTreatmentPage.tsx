@@ -29,7 +29,7 @@ export const SpineTreatmentPage: React.FC = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 sm:py-20 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
@@ -78,7 +78,7 @@ export const SpineTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 1: Conditions Evaluated */}
-        <section id="conditions" className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section id="conditions" className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
               
@@ -113,7 +113,7 @@ export const SpineTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 2: How Care Works */}
-        <section className="py-16 sm:py-20 bg-white border-t border-slate-200/60">
+        <section className="py-12 sm:py-16 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
@@ -147,7 +147,7 @@ export const SpineTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 3: Operative Care & Spine Stabilisation */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-teal-100/60">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-teal-100/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-10">
               <span className="text-xs font-bold tracking-widest text-slate-500 uppercase block mb-2">
@@ -201,16 +201,18 @@ export const SpineTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 4: What to Expect */}
-        <section className="py-16 sm:py-20 bg-white border-t border-slate-200/60">
+        <section className="py-12 sm:py-16 bg-white border-t border-slate-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                Patient Guidance
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
-                What to Expect
-              </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  Patient Guidance
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  What to Expect
+                </h2>
+              </div>
+              <div className="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 <p>{spine.patientExpectation}</p>
                 <p>
                   Where physiotherapy is recommended, this is integrated into the spine care pathway and provided in-house. All treatment decisions — whether conservative or surgical — are made on the basis of individual clinical assessment.

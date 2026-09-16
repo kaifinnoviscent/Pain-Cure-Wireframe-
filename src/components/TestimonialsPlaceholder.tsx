@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Instagram } from 'lucide-react';
+import { ExternalLink, Instagram, FileCheck2 } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicalData';
 import { useInView } from '../hooks/useInView';
 
@@ -10,7 +10,7 @@ export const TestimonialsPlaceholder: React.FC = () => {
     <section 
       id="testimonials" 
       ref={sectionRef}
-      className="py-14 sm:py-20 bg-[#F8FCFA] border-b border-teal-100/70"
+      className="py-12 sm:py-16 bg-[#F8FCFA] border-b border-teal-100/70"
       aria-label="Clinical Updates and Experiences"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,18 +33,23 @@ export const TestimonialsPlaceholder: React.FC = () => {
               Patient stories coming soon.
             </h2>
             
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-5 max-w-2xl">
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6 max-w-2xl">
               Patient recovery accounts and clinical case documentation are being compiled for publication following clinical review. We believe in sharing authentic clinical experiences.
             </p>
 
-            <p className="text-xs text-slate-500 font-medium pt-3 border-t border-slate-200/80">
-              Clinical recovery accounts will be published here following formal review.
-            </p>
+            <div className="p-4 rounded-xl bg-white border border-teal-100/80 shadow-card inline-flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-teal-50 border border-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <FileCheck2 className="w-4 h-4" />
+              </div>
+              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                Clinical recovery accounts will be published here following formal review.
+              </p>
+            </div>
           </div>
 
           {/* Right: Direct Social Connection */}
           <div 
-            className={`lg:col-span-5 bg-white border border-teal-100 rounded-2xl p-6 sm:p-7 shadow-xs transition-all duration-500 ease-out delay-[120ms] ${
+            className={`lg:col-span-5 bg-white border border-teal-100 rounded-2xl p-6 sm:p-7 shadow-card transition-all duration-500 ease-out delay-[120ms] ${
               isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
             }`}
           >
@@ -69,7 +74,7 @@ export const TestimonialsPlaceholder: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ transitionDelay: `${idx * 60}ms` }}
-                  className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 hover:border-teal-400 bg-slate-50/50 hover:bg-teal-50/30 hover:shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press group"
+                  className="flex items-center justify-between p-3.5 rounded-xl border border-slate-200/90 hover:border-teal-400 bg-slate-50/50 hover:bg-teal-50/30 hover:shadow-card transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press group"
                 >
                   <span className="text-xs sm:text-sm font-bold text-navy-900 group-hover:text-teal-900">
                     {item.handle}

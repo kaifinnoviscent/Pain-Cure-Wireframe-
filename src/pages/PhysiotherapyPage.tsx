@@ -29,7 +29,7 @@ export const PhysiotherapyPage: React.FC = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 sm:py-20 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
@@ -47,14 +47,14 @@ export const PhysiotherapyPage: React.FC = () => {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-lg shadow-sm transition-all duration-150 text-sm sm:text-base"
+                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-card transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>Consult on Physiotherapy</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <a
                     href="#modalities-list"
-                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-navy-900 font-semibold px-6 py-3.5 rounded-lg border border-slate-300 transition-all duration-150 text-sm sm:text-base"
+                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-navy-900 font-semibold px-6 py-3.5 rounded-xl border border-slate-300 shadow-2xs transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>View Approved Modalities</span>
                   </a>
@@ -62,11 +62,11 @@ export const PhysiotherapyPage: React.FC = () => {
               </div>
 
               <div className="lg:col-span-5">
-                <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm bg-slate-50">
+                <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-card group bg-slate-50">
                   <img
                     src={physioImg}
                     alt="Clinical physiotherapy session at Pain Cure clinic"
-                    className="w-full h-[320px] sm:h-[420px] object-cover object-center"
+                    className="w-full h-[320px] sm:h-[420px] object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     width="600"
                     height="420"
                   />
@@ -78,40 +78,44 @@ export const PhysiotherapyPage: React.FC = () => {
         </section>
 
         {/* SECTION 1: What It Addresses */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                Clinical Focus
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
-                When Physiotherapy Is Recommended
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
-                {physio.whoItIsFor}
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  'Post-operative rehabilitation following orthopaedic procedures',
-                  'Conservative management of joint pain and stiffness',
-                  'Recovery from sports and musculoskeletal injuries',
-                  'Restoration of functional movement, balance, and strength',
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/80 shadow-xs">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-semibold text-navy-900">{item}</span>
-                  </div>
-                ))}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  Clinical Focus
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  When Physiotherapy Is Recommended
+                </h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                  {physio.whoItIsFor}
+                </p>
+              </div>
+              <div className="lg:col-span-7">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    'Post-operative rehabilitation following orthopaedic procedures',
+                    'Conservative management of joint pain and stiffness',
+                    'Recovery from sports and musculoskeletal injuries',
+                    'Restoration of functional movement, balance, and strength',
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3.5 p-4 sm:p-5 bg-white rounded-xl border border-slate-200/90 shadow-card">
+                      <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
+                      <span className="text-sm font-semibold text-navy-900 leading-snug">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 2: Approved Modalities — Detailed Clinical Explanation */}
-        <section id="modalities-list" className="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+        <section id="modalities-list" className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="max-w-3xl mb-14">
+            <div className="max-w-3xl mb-8 sm:mb-10">
               <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
                 Approved Modalities
               </span>
@@ -123,15 +127,15 @@ export const PhysiotherapyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="space-y-6 max-w-4xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {PHYSIOTHERAPY_MODALITIES.map((mod, index) => (
                 <div
                   key={mod.id}
-                  className="p-7 sm:p-8 bg-slate-50/70 rounded-2xl border border-slate-200/90 shadow-xs"
+                  className="p-7 sm:p-8 bg-white rounded-2xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all duration-300 group"
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-200 mb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-8 h-8 rounded-lg bg-teal-50 border border-teal-200 text-teal-800 font-mono font-bold text-xs flex items-center justify-center">
+                      <span className="w-8 h-8 rounded-lg bg-teal-50 border border-teal-200 text-teal-800 font-mono font-bold text-xs flex items-center justify-center shadow-2xs group-hover:bg-teal-600 group-hover:text-white transition-colors duration-200">
                         0{index + 1}
                       </span>
                       <div>
@@ -143,14 +147,14 @@ export const PhysiotherapyPage: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    <span className="inline-block self-start sm:self-auto px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-semibold text-teal-800">
+                    <span className="inline-block self-start sm:self-auto px-3 py-1 bg-teal-50/80 border border-teal-200/60 rounded-full text-xs font-semibold text-teal-900">
                       Approved Clinical Modality
                     </span>
                   </div>
 
-                  <div className="space-y-3.5 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                    <div>
-                      <span className="font-bold text-navy-900 block mb-0.5 text-xs">What it is:</span>
+                  <div className="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    <div className="p-3 bg-slate-50/80 rounded-xl border border-slate-100">
+                      <span className="font-bold text-navy-900 block mb-0.5 text-xs uppercase tracking-wider text-teal-800">What it is:</span>
                       <p>{mod.whatItIs}</p>
                     </div>
                     <div>
@@ -170,16 +174,18 @@ export const PhysiotherapyPage: React.FC = () => {
         </section>
 
         {/* SECTION 3: What to Expect */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                Patient Guidance
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
-                What to Expect
-              </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  Patient Guidance
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  What to Expect
+                </h2>
+              </div>
+              <div className="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 <p>{physio.patientExpectation}</p>
                 <p>
                   Modalities are never applied blindly; they are selected to complement active exercise and rehabilitation according to your individual assessment.

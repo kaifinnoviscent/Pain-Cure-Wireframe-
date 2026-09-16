@@ -62,7 +62,7 @@ export const JointsTreatmentPage: React.FC = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 sm:py-20 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
@@ -111,40 +111,44 @@ export const JointsTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 1: What It Addresses */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                What It Addresses
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
-                Peripheral Joint Conditions Evaluated
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
-                {joints.whoItIsFor}
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  'Joint stiffness and restricted range of motion',
-                  'Persistent discomfort during daily activities',
-                  'Localized swelling or joint tenderness',
-                  'Loss of functional strength and flexibility',
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/80 shadow-xs">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-semibold text-navy-900">{item}</span>
-                  </div>
-                ))}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  What It Addresses
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  Peripheral Joint Conditions Evaluated
+                </h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                  {joints.whoItIsFor}
+                </p>
+              </div>
+              <div className="lg:col-span-7">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    'Joint stiffness and restricted range of motion',
+                    'Persistent discomfort during daily activities',
+                    'Localized swelling or joint tenderness',
+                    'Loss of functional strength and flexibility',
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/80 shadow-xs">
+                      <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
+                      <span className="text-sm font-semibold text-navy-900">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 2: Anatomical Regions & Clinical Scope */}
-        <section id="joint-regions" className="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+        <section id="joint-regions" className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="max-w-3xl mb-14">
+            <div className="max-w-3xl mb-8 sm:mb-10">
               <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
                 Clinical Scope
               </span>
@@ -183,16 +187,18 @@ export const JointsTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 3: What to Expect */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                Patient Guidance
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
-                What to Expect
-              </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  Patient Guidance
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  What to Expect
+                </h2>
+              </div>
+              <div className="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 <p>{joints.patientExpectation}</p>
                 <p>
                   Management plans are tailored specifically to the joint affected and the underlying findings of your assessment, with physical modalities and exercises integrated where beneficial.

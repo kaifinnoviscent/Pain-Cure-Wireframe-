@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { TreatmentOverviewPage } from './pages/TreatmentOverviewPage';
@@ -13,11 +13,43 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
-// Scroll to top or anchor on route change
-function ScrollManager() {
+const ROUTE_TITLES: Record<string, string> = {
+  '/': 'Pain Cure Ortho & Rehab Clinic | Orthopaedic Care & Rehabilitation',
+  '/about': 'About Us | Pain Cure Ortho & Rehab Clinic',
+  '/contact': 'Contact | Pain Cure Ortho & Rehab Clinic',
+  '/treatments': 'Treatments | Pain Cure Ortho & Rehab Clinic',
+  '/treatments/spine': 'Spine Care | Pain Cure Ortho & Rehab Clinic',
+  '/treatments/knee': 'Knee Treatment | Pain Cure Ortho & Rehab Clinic',
+  '/treatments/hip': 'Hip Treatment | Pain Cure Ortho & Rehab Clinic',
+  '/treatments/joints': 'Joint Treatment | Pain Cure Ortho & Rehab Clinic',
+  '/treatments/sports-injury': 'Sports Injury | Pain Cure Ortho & Rehab Clinic',
+  '/treatments/physiotherapy': 'Physiotherapy | Pain Cure Ortho & Rehab Clinic',
+  '/post-operative-rehab': 'Post-Operative Rehabilitation | Pain Cure Ortho & Rehab Clinic',
+};
+
+// Route manager for scroll position, document titles, and robots meta
+function RouteManager() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    // 1. Update Document Title
+    const title = ROUTE_TITLES[pathname] || 'Page Not Found | Pain Cure Ortho & Rehab Clinic';
+    document.title = title;
+
+    // 2. Manage robots meta tag for 404 routes
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (!ROUTE_TITLES[pathname]) {
+      if (!robotsMeta) {
+        robotsMeta = document.createElement('meta');
+        robotsMeta.setAttribute('name', 'robots');
+        document.head.appendChild(robotsMeta);
+      }
+      robotsMeta.setAttribute('content', 'noindex, nofollow');
+    } else if (robotsMeta) {
+      robotsMeta.setAttribute('content', 'index, follow');
+    }
+
+    // 3. Scroll to hash anchor or top
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
@@ -34,7 +66,7 @@ function ScrollManager() {
 export const App: React.FC = () => {
   return (
     <>
-      <ScrollManager />
+      <RouteManager />
       <Routes>
         <Route path="/" element={<HomePage />} />
         

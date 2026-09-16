@@ -11,7 +11,7 @@ export function useInView<T extends HTMLElement = HTMLDivElement>(
 ): [React.RefObject<T>, boolean] {
   const { threshold = 0.02, rootMargin = '0px 0px 80px 0px', once = true } = options;
   const ref = useRef<T>(null);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(true);
 
   useEffect(() => {
     // If user prefers reduced motion, show immediately

@@ -56,7 +56,7 @@ export const PostOpRehabPage: React.FC = () => {
         </div>
 
         {/* Hero Section: Grounded Deep Navy Editorial */}
-        <section className="py-16 sm:py-24 bg-navy-950 text-white relative overflow-hidden">
+        <section className="py-12 sm:py-16 bg-navy-950 text-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
@@ -67,20 +67,31 @@ export const PostOpRehabPage: React.FC = () => {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
                   In-house Post Operative Rehab
                 </h1>
-                <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-8">
-                  <p>
-                    Orthopaedic surgery creates the anatomical foundation for recovery, but the outcome depends significantly on the rehabilitation that follows. How movement is reintroduced, how joints are mobilized, and how strength is rebuilt all influence the patient's eventual functional independence.
-                  </p>
-                  <p>
-                    Pain Cure provides dedicated in-house post-operative rehabilitation so that recovery is supervised within the same clinical environment. Care is tailored to each patient's procedure, healing progress, and personal rehabilitation goals.
-                  </p>
+                
+                <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-6">
+                  Orthopaedic surgery creates the anatomical foundation for recovery, but the outcome depends significantly on the rehabilitation that follows. How movement is reintroduced, how joints are mobilized, and how strength is rebuilt all influence the patient's eventual functional independence.
+                </p>
+
+                {/* Mobile Hero Image: surfaces photograph early on mobile */}
+                <div className="block lg:hidden w-full mb-6 overflow-hidden rounded-2xl border border-white/20 shadow-2xl bg-navy-900">
+                  <img
+                    src={rehabImg}
+                    alt="In-house post-operative rehabilitation session at Pain Cure clinic"
+                    className="w-full h-[260px] sm:h-[340px] object-cover"
+                    width="640"
+                    height="340"
+                  />
                 </div>
 
-                <div className="space-y-3.5 mb-10 w-full">
+                <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-8">
+                  Pain Cure provides dedicated in-house post-operative rehabilitation so that recovery is supervised within the same clinical environment. Care is tailored to each patient's procedure, healing progress, and personal rehabilitation goals.
+                </p>
+
+                <div className="space-y-3 mb-10 w-full">
                   {highlights.map((item) => (
-                    <div key={item} className="flex items-start gap-3.5">
+                    <div key={item} className="p-3.5 bg-white/[0.06] border border-white/10 rounded-xl flex items-start gap-3.5">
                       <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base text-slate-200 font-normal leading-relaxed">{item}</span>
+                      <span className="text-sm sm:text-base text-slate-200 font-medium leading-relaxed">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -88,26 +99,27 @@ export const PostOpRehabPage: React.FC = () => {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-7 py-3.5 rounded-lg shadow-sm transition-all duration-150 text-sm sm:text-base"
+                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>Consult on Post-Op Care</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <a
                     href="#recovery-philosophy"
-                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold px-6 py-3.5 rounded-lg border border-white/20 transition-all duration-150 text-sm sm:text-base"
+                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>Our Care Journey</span>
                   </a>
                 </div>
               </div>
 
-              <div className="lg:col-span-6">
-                <div className="overflow-hidden rounded-2xl border border-white/15 shadow-2xl bg-navy-900">
+              {/* Desktop Hero Image */}
+              <div className="hidden lg:block lg:col-span-6">
+                <div className="overflow-hidden rounded-2xl border border-white/20 shadow-2xl bg-navy-900 group">
                   <img
                     src={rehabImg}
                     alt="In-house post-operative rehabilitation session at Pain Cure clinic"
-                    className="w-full h-[360px] sm:h-[460px] object-cover"
+                    className="w-full h-[460px] object-cover transition-transform duration-500 group-hover:scale-105"
                     width="640"
                     height="460"
                   />
@@ -119,9 +131,9 @@ export const PostOpRehabPage: React.FC = () => {
         </section>
 
         {/* SECTION 1: Why In-House Rehabilitation Matters */}
-        <section className="py-16 sm:py-24 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mb-14">
+            <div className="max-w-3xl mb-8 sm:mb-10">
               <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
                 Clinical Approach
               </span>
@@ -134,50 +146,56 @@ export const PostOpRehabPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-8 bg-white rounded-2xl border border-slate-200/90 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-800 mb-5">
-                  <ShieldCheck className="w-5 h-5" />
+              <div className="p-7 sm:p-8 bg-white rounded-2xl border border-slate-200/90 shadow-card flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200/80 flex items-center justify-center text-teal-800 mb-5 shrink-0">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-navy-900 mb-2">
+                    Supervised Care
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    Rehabilitation exercises and modalities are directly supervised by clinical staff, ensuring safe technique and appropriate pacing throughout recovery.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900 mb-2">
-                  Supervised Care
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  Rehabilitation exercises and modalities are directly supervised by clinical staff, ensuring safe technique and appropriate pacing throughout recovery.
-                </p>
               </div>
 
-              <div className="p-8 bg-white rounded-2xl border border-slate-200/90 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-800 mb-5">
-                  <Activity className="w-5 h-5" />
+              <div className="p-7 sm:p-8 bg-white rounded-2xl border border-slate-200/90 shadow-card flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200/80 flex items-center justify-center text-teal-800 mb-5 shrink-0">
+                    <Activity className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-navy-900 mb-2">
+                    Progressive Restoration
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    Mobility, flexibility, and strength are rebuilt gradually, respecting the natural biological healing stages of surgical tissues and bone.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900 mb-2">
-                  Progressive Restoration
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  Mobility, flexibility, and strength are rebuilt gradually, respecting the natural biological healing stages of surgical tissues and bone.
-                </p>
               </div>
 
-              <div className="p-8 bg-white rounded-2xl border border-slate-200/90 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-800 mb-5">
-                  <UserCheck className="w-5 h-5" />
+              <div className="p-7 sm:p-8 bg-white rounded-2xl border border-slate-200/90 shadow-card flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200/80 flex items-center justify-center text-teal-800 mb-5 shrink-0">
+                    <UserCheck className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-navy-900 mb-2">
+                    Individual Adaptation
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    Every patient heals differently. Programmes are adapted based on individual comfort, mobility progress, and physician guidance.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900 mb-2">
-                  Individual Adaptation
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  Every patient heals differently. Programmes are adapted based on individual comfort, mobility progress, and physician guidance.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Philosophy & Care Journey Integration */}
-        <section id="recovery-philosophy" className="py-20 sm:py-28 bg-white border-t border-slate-200/80">
+        <section id="recovery-philosophy" className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="max-w-3xl mb-16 sm:mb-20">
+            <div className="max-w-3xl mb-8 sm:mb-10">
               <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-3">
                 Patient-Centred Philosophy
               </span>
@@ -189,20 +207,19 @@ export const PostOpRehabPage: React.FC = () => {
               </p>
             </div>
 
-            {/* Visual Connected Sequence */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Clean Editorial Care Progression Sequence */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
               {journeySteps.map((step) => (
                 <div
                   key={step.num}
-                  className="bg-slate-50 border border-slate-200/90 rounded-2xl p-8 flex flex-col justify-between shadow-xs"
+                  className="pt-6 border-t-2 border-teal-700/30 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-10 h-10 rounded-full bg-white border-2 border-teal-600 text-teal-800 font-extrabold text-sm flex items-center justify-center mb-6 shadow-xs">
-                      {step.num}
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="font-mono text-xs font-extrabold text-teal-800 bg-teal-50 border border-teal-200/80 px-2.5 py-1 rounded tracking-wider uppercase">
+                        Stage {step.num}
+                      </span>
                     </div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                      Stage {step.num}
-                    </span>
                     <h3 className="text-xl font-bold text-navy-900 tracking-tight mb-3">
                       {step.title}
                     </h3>
@@ -214,7 +231,7 @@ export const PostOpRehabPage: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-12 p-6 bg-mint-50/50 border border-teal-100 rounded-xl max-w-3xl">
+            <div className="mt-10 p-6 bg-teal-50/40 border border-teal-100 rounded-xl max-w-3xl">
               <p className="text-xs sm:text-sm text-slate-600 italic leading-relaxed">
                 Note: Individual rehabilitation plans and progression are determined strictly according to clinical evaluation, surgical recommendations, and medical advice.
               </p>

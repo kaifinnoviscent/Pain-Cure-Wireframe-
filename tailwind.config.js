@@ -43,8 +43,10 @@ export default {
       },
       boxShadow: {
         'subtle': '0 2px 10px rgba(7, 36, 68, 0.04)',
-        'card': '0 8px 30px rgba(7, 36, 68, 0.06)',
-        'card-hover': '0 16px 40px rgba(7, 36, 68, 0.10)',
+        'card': '0 4px 20px -2px rgba(7, 36, 68, 0.05), 0 2px 6px -1px rgba(7, 36, 68, 0.03)',
+        'card-hover': '0 12px 28px -4px rgba(7, 36, 68, 0.09), 0 4px 10px -2px rgba(7, 36, 68, 0.04)',
+        'elevated': '0 20px 40px -8px rgba(7, 36, 68, 0.12)',
+        'glow-teal': '0 0 25px -5px rgba(13, 139, 131, 0.15)',
         'nav': '0 4px 20px rgba(7, 36, 68, 0.05)',
       },
       borderRadius: {

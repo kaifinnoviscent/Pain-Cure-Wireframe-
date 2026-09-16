@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Activity, CheckCircle2, Shield } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Activity, CheckCircle2, Shield, Stethoscope } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ConsultationCTA } from '../components/ConsultationCTA';
@@ -29,7 +29,7 @@ export const SportsInjuryPage: React.FC = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 sm:py-20 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
@@ -78,37 +78,41 @@ export const SportsInjuryPage: React.FC = () => {
         </section>
 
         {/* SECTION 1: What It Addresses */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                What It Addresses
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
-                Injuries &amp; Activity-Related Conditions
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
-                {sports.whoItIsFor}
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  'Acute sports injuries from impact, twisting, or falls',
-                  'Overuse injuries developed through repetitive athletic training',
-                  'Joint instability and restricted athletic mobility',
-                  'Post-injury functional limitations and muscular weakness',
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/80 shadow-xs">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-semibold text-navy-900">{item}</span>
-                  </div>
-                ))}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  What It Addresses
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  Injuries &amp; Activity-Related Conditions
+                </h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                  {sports.whoItIsFor}
+                </p>
+              </div>
+              <div className="lg:col-span-7">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    'Acute sports injuries from impact, twisting, or falls',
+                    'Overuse injuries developed through repetitive athletic training',
+                    'Joint instability and restricted athletic mobility',
+                    'Post-injury functional limitations and muscular weakness',
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/80 shadow-xs">
+                      <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
+                      <span className="text-sm font-semibold text-navy-900">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 2: How Care Works */}
-        <section id="care-approach" className="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+        <section id="care-approach" className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               
@@ -127,36 +131,56 @@ export const SportsInjuryPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="lg:col-span-6 space-y-4">
-                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200/90 shadow-xs">
+              <div className="lg:col-span-6 divide-y divide-slate-200">
+                
+                {/* Step 01 */}
+                <div className="pb-6">
                   <div className="flex items-center gap-3 mb-2">
-                    <Activity className="w-5 h-5 text-teal-700" />
-                    <h3 className="text-lg font-bold text-navy-900">1. Clinical Assessment</h3>
+                    <span className="font-mono text-xs font-bold text-teal-800 bg-teal-50 border border-teal-200/80 px-2 py-0.5 rounded">
+                      01
+                    </span>
+                    <Stethoscope className="w-4 h-4 text-teal-700 shrink-0" />
+                    <h3 className="text-base sm:text-lg font-bold text-navy-900">
+                      Clinical Assessment
+                    </h3>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed pl-0 sm:pl-9">
                     Detailed examination of the injury, identifying affected joints, ligaments, tendons, and surrounding muscle groups, alongside movement pattern evaluation.
                   </p>
                 </div>
 
-                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200/90 shadow-xs">
+                {/* Step 02 */}
+                <div className="py-6">
                   <div className="flex items-center gap-3 mb-2">
-                    <Activity className="w-5 h-5 text-teal-700" />
-                    <h3 className="text-lg font-bold text-navy-900">2. In-House Physical Modalities</h3>
+                    <span className="font-mono text-xs font-bold text-teal-800 bg-teal-50 border border-teal-200/80 px-2 py-0.5 rounded">
+                      02
+                    </span>
+                    <Activity className="w-4 h-4 text-teal-700 shrink-0" />
+                    <h3 className="text-base sm:text-lg font-bold text-navy-900">
+                      In-House Physical Modalities
+                    </h3>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed pl-0 sm:pl-9">
                     Application of approved physiotherapy modalities to help manage pain, ease localized stiffness, and prepare tissues for active exercise.
                   </p>
                 </div>
 
-                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200/90 shadow-xs">
+                {/* Step 03 */}
+                <div className="pt-6">
                   <div className="flex items-center gap-3 mb-2">
-                    <Shield className="w-5 h-5 text-teal-700" />
-                    <h3 className="text-lg font-bold text-navy-900">3. Progressive Movement Restoration</h3>
+                    <span className="font-mono text-xs font-bold text-teal-800 bg-teal-50 border border-teal-200/80 px-2 py-0.5 rounded">
+                      03
+                    </span>
+                    <Shield className="w-4 h-4 text-teal-700 shrink-0" />
+                    <h3 className="text-base sm:text-lg font-bold text-navy-900">
+                      Progressive Movement Restoration
+                    </h3>
                   </div>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed pl-0 sm:pl-9">
                     Controlled resistance exercises and functional movement training designed to safely rebuild strength and joint stability toward normal activity.
                   </p>
                 </div>
+
               </div>
 
             </div>
@@ -164,16 +188,18 @@ export const SportsInjuryPage: React.FC = () => {
         </section>
 
         {/* SECTION 3: What to Expect */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                Patient Guidance
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
-                What to Expect
-              </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  Patient Guidance
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  What to Expect
+                </h2>
+              </div>
+              <div className="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 <p>{sports.patientExpectation}</p>
                 <p>
                   Rehabilitation is an active collaboration between the patient and the clinical team. Every phase of progression is evaluated carefully to support safe recovery without re-injury.

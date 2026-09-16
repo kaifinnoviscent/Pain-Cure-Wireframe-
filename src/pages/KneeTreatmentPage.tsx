@@ -29,7 +29,7 @@ export const KneeTreatmentPage: React.FC = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 sm:py-20 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               
@@ -47,14 +47,14 @@ export const KneeTreatmentPage: React.FC = () => {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-lg shadow-sm transition-all duration-150 text-sm sm:text-base"
+                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-card transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>Consult on Knee Care</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <a
                     href="#care-pathways"
-                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-navy-900 font-semibold px-6 py-3.5 rounded-lg border border-slate-300 transition-all duration-150 text-sm sm:text-base"
+                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-navy-900 font-semibold px-6 py-3.5 rounded-xl border border-slate-300 shadow-2xs transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>Explore Pathways</span>
                   </a>
@@ -62,11 +62,11 @@ export const KneeTreatmentPage: React.FC = () => {
               </div>
 
               <div className="lg:col-span-5">
-                <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm bg-slate-50">
+                <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-card group bg-slate-50">
                   <img
                     src={kneeImg}
                     alt="Clinical knee examination session at Pain Cure clinic"
-                    className="w-full h-[320px] sm:h-[420px] object-cover object-center"
+                    className="w-full h-[320px] sm:h-[420px] object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     width="600"
                     height="420"
                   />
@@ -78,40 +78,44 @@ export const KneeTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 1: What It Addresses */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                What It Addresses
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
-                Knee Conditions &amp; Symptoms Evaluated
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
-                {knee.whoItIsFor}
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  'Joint pain and localized stiffness',
-                  'Discomfort with walking or weight-bearing',
-                  'Reduced range of movement and knee flexion',
-                  'Degenerative joint changes and wear',
-                ].map((symptom) => (
-                  <div key={symptom} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200/80 shadow-xs">
-                    <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
-                    <span className="text-sm font-semibold text-navy-900">{symptom}</span>
-                  </div>
-                ))}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  What It Addresses
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  Knee Conditions &amp; Symptoms Evaluated
+                </h2>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                  {knee.whoItIsFor}
+                </p>
+              </div>
+              <div className="lg:col-span-7">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    'Joint pain and localized stiffness',
+                    'Discomfort with walking or weight-bearing',
+                    'Reduced range of movement and knee flexion',
+                    'Degenerative joint changes and wear',
+                  ].map((symptom) => (
+                    <div key={symptom} className="flex items-start gap-3.5 p-4 sm:p-5 bg-white rounded-xl border border-slate-200/90 shadow-card">
+                      <CheckCircle2 className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
+                      <span className="text-sm font-semibold text-navy-900 leading-snug">{symptom}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* SECTION 2: Pathways Section */}
-        <section id="care-pathways" className="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+        <section id="care-pathways" className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="max-w-3xl mb-16">
+            <div className="max-w-3xl mb-8 sm:mb-10">
               <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
                 Clinical Pathways
               </span>
@@ -123,12 +127,14 @@ export const KneeTreatmentPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               
               {/* NON-OPERATIVE PATHWAY */}
-              <div className="lg:col-span-7 bg-white border border-teal-100 rounded-2xl p-8 sm:p-12 shadow-xs">
+              <div className="lg:col-span-7 bg-white border border-teal-100 rounded-2xl p-7 sm:p-10 shadow-card">
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-teal-50">
-                  <Activity className="w-5 h-5 text-teal-600" />
+                  <div className="w-8 h-8 rounded-lg bg-teal-50 border border-teal-200 text-teal-700 flex items-center justify-center">
+                    <Activity className="w-4 h-4" />
+                  </div>
                   <span className="text-xs font-extrabold tracking-widest text-teal-800 uppercase">
                     Conservative First Line
                   </span>
@@ -141,16 +147,16 @@ export const KneeTreatmentPage: React.FC = () => {
                   Non-operative management aims to manage discomfort and support joint mobility without surgery wherever the clinical condition permits.
                 </p>
 
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   {knee.nonOperative?.map((item) => (
                     <div
                       key={item}
-                      className="p-5 bg-mint-50/50 rounded-xl border border-teal-100/60 flex items-center justify-between"
+                      className="p-4 sm:p-4.5 bg-teal-50/40 rounded-xl border border-teal-100/80 flex items-center justify-between shadow-2xs"
                     >
-                      <h4 className="text-base sm:text-lg font-bold text-navy-900">
+                      <h4 className="text-base font-bold text-navy-900">
                         {item}
                       </h4>
-                      <span className="text-xs font-semibold px-3 py-1 bg-white border border-teal-200 text-teal-800 rounded-full">
+                      <span className="text-xs font-semibold px-3 py-1 bg-white border border-teal-200 text-teal-800 rounded-full shadow-2xs">
                         Non-Operative
                       </span>
                     </div>
@@ -159,10 +165,12 @@ export const KneeTreatmentPage: React.FC = () => {
               </div>
 
               {/* OPERATIVE PATHWAY */}
-              <div className="lg:col-span-5 bg-white border border-slate-200/90 rounded-2xl p-8 sm:p-12 shadow-xs flex flex-col justify-between">
+              <div className="lg:col-span-5 bg-white border border-slate-200/90 rounded-2xl p-7 sm:p-10 shadow-card flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                    <Stethoscope className="w-5 h-5 text-navy-800" />
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 border border-slate-200 text-navy-800 flex items-center justify-center">
+                      <Stethoscope className="w-4 h-4" />
+                    </div>
                     <span className="text-xs font-extrabold tracking-widest text-slate-500 uppercase">
                       Surgical Care
                     </span>
@@ -175,14 +183,14 @@ export const KneeTreatmentPage: React.FC = () => {
                     When conservative measures are insufficient and joint wear is localized, operative intervention is considered.
                   </p>
 
-                  <div className="p-6 bg-slate-50 rounded-xl border border-slate-200 mb-6">
+                  <div className="p-5 bg-slate-50 rounded-xl border border-slate-200/80 mb-6 shadow-2xs">
                     <span className="text-xs font-bold text-teal-700 uppercase tracking-wider block mb-2">
                       Operative Procedure
                     </span>
                     <h4 className="text-lg font-bold text-navy-900">
                       Unicondylar knee replacement
                     </h4>
-                    <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                    <p className="text-xs text-slate-600 mt-2 leading-relaxed font-normal">
                       Partial knee replacement targeting the affected compartment of the knee joint. Supported by in-house post-operative rehabilitation.
                     </p>
                   </div>
@@ -205,16 +213,18 @@ export const KneeTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 3: What to Expect */}
-        <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
-                Patient Guidance
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
-                What to Expect
-              </h2>
-              <div className="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+              <div className="lg:col-span-5">
+                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                  Patient Guidance
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                  What to Expect
+                </h2>
+              </div>
+              <div className="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 <p>{knee.patientExpectation}</p>
                 <p>
                   Whether managed conservatively or through surgical replacement, rehabilitation is focused on restoring joint function and helping you resume daily activities with confidence.

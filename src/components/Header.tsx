@@ -261,7 +261,7 @@ export const Header: React.FC = () => {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white text-[15px] font-semibold px-6 py-3 rounded-lg shadow-sm hover:shadow transition-all duration-150 active:scale-[0.99] touch-target focus-visible:outline-teal-600"
+              className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white text-[15px] font-semibold px-6 py-3 rounded-xl shadow-sm hover:shadow transition-all duration-150 active:scale-[0.99] touch-target focus-visible:outline-teal-600"
             >
               <span>Request a Consultation</span>
               <ArrowRight className="w-4 h-4" />
@@ -272,7 +272,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-3 lg:hidden">
             <Link
               to="/contact"
-              className="bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold px-3.5 py-2.5 rounded-lg touch-target flex items-center justify-center shadow-xs"
+              className="bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold px-3.5 py-2.5 rounded-xl touch-target flex items-center justify-center shadow-xs"
             >
               Consult
             </Link>

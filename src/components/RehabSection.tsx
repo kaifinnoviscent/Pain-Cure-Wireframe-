@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Activity } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 import rehabImg from '../assets/post-op-rehab.jpg';
 
@@ -11,7 +11,7 @@ export const RehabSection: React.FC = () => {
     <section 
       id="rehab" 
       ref={sectionRef}
-      className="py-18 sm:py-28 bg-[#041628] text-white relative overflow-hidden border-b border-navy-900"
+      className="py-12 sm:py-16 bg-[#041628] text-white relative overflow-hidden border-b border-navy-900"
       aria-label="Clinical Rehabilitation"
     >
       {/* Ambient background contrast glow */}
@@ -54,7 +54,7 @@ export const RehabSection: React.FC = () => {
               }`}
             >
               <p>
-                Orthopaedic surgery is only part of the recovery process. What happens in the weeks following a procedure — how movement is gradually restored, how the body is supported through the early stages of healing — shapes the patient's ability to return to everyday activities.
+                Orthopaedic surgery is only part of the recovery process. What happens in the weeks following a procedure &mdash; how movement is gradually restored, how the body is supported through the early stages of healing &mdash; shapes the patient's ability to return to everyday activities.
               </p>
               <p>
                 Pain Cure provides in-house post-operative rehabilitation to support patients through this phase. Rather than navigating post-surgical recovery alone, patients have access to supervised rehabilitation within the same clinical environment. The aim is a progressive, structured return to functional movement, tailored to the individual's condition and surgical pathway.
@@ -62,7 +62,7 @@ export const RehabSection: React.FC = () => {
             </div>
 
             <div 
-              className={`space-y-3 mb-8 w-full transition-all duration-500 ease-out delay-[240ms] ${
+              className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 w-full transition-all duration-500 ease-out delay-[240ms] ${
                 isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
               }`}
             >
@@ -74,7 +74,7 @@ export const RehabSection: React.FC = () => {
               ].map((item, idx) => (
                 <div 
                   key={item} 
-                  className="flex items-start gap-3 transition-all duration-500 ease-out"
+                  className="p-3.5 bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 rounded-xl transition-colors duration-200 flex items-start gap-3"
                   style={{ transitionDelay: `${240 + idx * 80}ms` }}
                 >
                   <span className="w-5 h-5 rounded-full bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-300 shrink-0 mt-0.5">
@@ -108,17 +108,27 @@ export const RehabSection: React.FC = () => {
             }`}
           >
             <div className="relative mx-auto max-w-lg lg:max-w-none group">
-              <div className="overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-teal-500/30 shadow-2xl bg-navy-900">
+              <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-white/20 shadow-2xl bg-navy-900 relative">
                 <img
                   src={rehabImg}
                   alt="Post-operative clinical rehabilitation session at Pain Cure clinic"
-                  className={`w-full h-[260px] sm:h-[360px] lg:h-[420px] object-cover transition-all duration-700 ease-out group-hover:scale-[1.03] ${
+                  className={`w-full h-[280px] sm:h-[380px] lg:h-[440px] object-cover transition-all duration-700 ease-out group-hover:scale-[1.03] ${
                     isInView ? 'scale-100 opacity-100' : 'scale-[1.035] opacity-90'
                   }`}
-                  loading="lazy"
                   width="600"
-                  height="420"
+                  height="440"
                 />
+
+                {/* Floating In-Clinic Badge */}
+                <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-navy-950/85 backdrop-blur-md border border-white/15 rounded-xl px-4 py-2.5 shadow-xl flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-300 shrink-0">
+                    <Activity className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-white tracking-wide">Supervised Recovery</p>
+                    <p className="text-[11px] text-teal-300/90 font-medium">In-Clinic Structured Sessions</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

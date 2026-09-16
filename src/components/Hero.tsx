@@ -80,23 +80,21 @@ export const Hero: React.FC = () => {
               className="animate-hero-fade-up pt-5 border-t border-slate-200/90 w-full max-w-xl"
               style={{ animationDelay: '500ms' }}
             >
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-600 font-medium">
-                <span className="flex items-center gap-1.5 text-navy-900 font-semibold">
-                  <span className="w-4 h-4 rounded-full bg-teal-100 flex items-center justify-center text-teal-700">
+              <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-600 font-medium">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-teal-200/90 rounded-lg shadow-2xs text-navy-900 font-semibold text-xs sm:text-sm">
+                  <span className="w-4 h-4 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </span>
                   Personalised assessment
                 </span>
-                <span className="hidden sm:inline text-slate-300" aria-hidden="true">&bull;</span>
-                <span className="flex items-center gap-1.5 text-navy-900 font-semibold">
-                  <span className="w-4 h-4 rounded-full bg-teal-100 flex items-center justify-center text-teal-700">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-teal-200/90 rounded-lg shadow-2xs text-navy-900 font-semibold text-xs sm:text-sm">
+                  <span className="w-4 h-4 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </span>
                   In-house post-op rehab
                 </span>
-                <span className="hidden sm:inline text-slate-300" aria-hidden="true">&bull;</span>
-                <span className="flex items-center gap-1.5 text-navy-900 font-semibold">
-                  <span className="w-4 h-4 rounded-full bg-teal-100 flex items-center justify-center text-teal-700">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-teal-200/90 rounded-lg shadow-2xs text-navy-900 font-semibold text-xs sm:text-sm">
+                  <span className="w-4 h-4 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
                   </span>
                   Non-operative &amp; surgical pathways
@@ -114,7 +112,7 @@ export const Hero: React.FC = () => {
               {/* Subtle decorative framing glow */}
               <div className="absolute -inset-1.5 bg-gradient-to-tr from-teal-400/25 to-teal-100/40 rounded-3xl blur-md opacity-80 group-hover:opacity-100 transition-opacity" />
 
-              <div className="overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-teal-200/90 shadow-2xl bg-white relative">
+              <div className="overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-teal-200/90 shadow-2xl bg-white relative ring-1 ring-teal-500/20">
                 <img
                   src={heroImg}
                   alt="Physical rehabilitation and guided mobility session at Pain Cure clinic"
@@ -127,12 +125,12 @@ export const Hero: React.FC = () => {
                 {/* Floating Clinical Indicator */}
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md border border-teal-200 rounded-xl px-4 py-3 shadow-md flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-teal-600 shrink-0" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-teal-600 shrink-0 shadow-xs" />
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-navy-900">
                       In-House Rehabilitation
                     </span>
                   </div>
-                  <span className="text-xs font-extrabold text-teal-700 bg-teal-50 px-2 py-0.5 rounded border border-teal-100">
+                  <span className="text-xs font-extrabold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md border border-teal-200">
                     Active Care
                   </span>
                 </div>

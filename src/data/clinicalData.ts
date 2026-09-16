@@ -216,19 +216,31 @@ export const TREATMENTS: TreatmentCategory[] = [
 
 export const CLINIC_INFO = {
   name: 'Pain Cure Ortho & Rehab Clinic',
-  domain: 'www.paincureotho.com',
+  domain: 'www.paincureortho.com',
   headline: 'Move better. Live stronger.',
   subheadline: 'Personalised orthopaedic treatment and rehabilitation focused on helping patients return to movement, everyday activities, and life with confidence.',
+  phone: '7977868264',
+  phoneDisplay: '+91 79778 68264',
+  phoneTel: 'tel:7977868264',
+  address: '42/44 Patra Chawl New Compound, Seth Motisa Lane, Opp. Sahakari Bhandar, Mazgoan, Mumbai - 10',
+  addressLines: [
+    '42/44 Patra Chawl New Compound, Seth Motisa Lane,',
+    'Opp. Sahakari Bhandar, Mazgoan, Mumbai - 10',
+  ],
+  landmark: 'Opp. Sahakari Bhandar',
+  area: 'Mazgoan, Mumbai - 10',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=42%2F44+Patra+Chawl+New+Compound%2C+Seth+Motisa+Lane%2C+Opp.+Sahakari+Bhandar%2C+Mazgoan%2C+Mumbai+-+10',
   instagram: [
     { handle: '@paincureortho', url: 'https://www.instagram.com/paincureortho/' },
     { handle: '@merchantdrmohsin', url: 'https://www.instagram.com/merchantdrmohsin/' },
   ],
-  // Placeholders explicitly marked until verified details are provided
+  // Verified details and unverified fields (email & timings disabled from UI)
   placeholders: {
-    phone: '[Clinic Contact Number]',
-    email: '[Clinic Email Address]',
-    address: '[Clinic Address & Location Details]',
-    timings: '[Consultation Timings / Days]',
+    phone: '+91 79778 68264',
+    address: '42/44 Patra Chawl New Compound, Seth Motisa Lane, Opp. Sahakari Bhandar, Mazgoan, Mumbai - 10',
+    // Unverified fields — disabled from rendered UI:
+    email: '[Unverified - Disabled]',
+    timings: '[Unverified - Disabled]',
   }
 };
 
