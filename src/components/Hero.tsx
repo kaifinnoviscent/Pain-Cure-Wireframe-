@@ -6,7 +6,7 @@ import heroImg from '../assets/hero-rehab.jpg';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#EBF7F4] via-[#F6FCFA] to-white pt-8 pb-14 sm:pt-12 sm:pb-18 lg:pt-18 lg:pb-24 border-b border-teal-100/90">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#EBF7F4] via-[#F6FCFA] to-white pt-8 pb-10 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16 border-b border-teal-100/90">
       {/* Editorial atmospheric glow behind hero composition */}
       <div 
         className="absolute top-0 right-0 w-[550px] h-[550px] bg-gradient-to-bl from-teal-200/35 via-mint-100/25 to-transparent rounded-full blur-3xl pointer-events-none -z-10" 
@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
           
           {/* Left Narrative Column */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            {/* Monospace Eyebrow Badge (Stagger 80ms) */}
+            {/* Eyebrow Badge (Stagger 80ms) */}
             <div 
               className="animate-hero-fade-up inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-md bg-white border border-teal-200 shadow-2xs mb-4 sm:mb-5"
               style={{ animationDelay: '80ms' }}
@@ -31,14 +31,14 @@ export const Hero: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-600"></span>
               </span>
-              <span className="font-mono text-xs font-extrabold tracking-widest text-teal-800 uppercase">
+              <span className="text-xs font-bold tracking-wider text-teal-900 uppercase">
                 Orthopaedic Care &amp; Rehabilitation
               </span>
             </div>
 
             {/* Main Headline (Stagger 160ms) */}
             <h1 
-              className="animate-hero-fade-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-[1.08] mb-5 sm:mb-6"
+              className="animate-hero-fade-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-[1.15] sm:leading-[1.12] mb-5 sm:mb-6"
               style={{ animationDelay: '160ms' }}
             >
               Move better.{' '}
@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
 
             {/* Supporting Narrative (Stagger 260ms) */}
             <p 
-              className="animate-hero-fade-up text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-6 sm:mb-8 font-normal"
+              className="animate-hero-fade-up text-base sm:text-lg text-slate-700 leading-relaxed max-w-xl mb-6 sm:mb-8 font-normal"
               style={{ animationDelay: '260ms' }}
             >
               Personalised orthopaedic treatment and rehabilitation focused on helping patients return to movement, everyday activities, and life with confidence.
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
                 style={{ animationDelay: '420ms' }}
               >
                 <span>Explore Treatments</span>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-teal-700 group-hover:translate-x-0.5 transition-all" />
+                <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-teal-700 group-hover:translate-x-0.5 transition-all" />
               </Link>
             </div>
 
@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
               className="animate-hero-fade-up pt-5 border-t border-slate-200/90 w-full max-w-xl"
               style={{ animationDelay: '500ms' }}
             >
-              <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-600 font-medium">
+              <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-700 font-medium">
                 <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-teal-200/90 rounded-lg shadow-2xs text-navy-900 font-semibold text-xs sm:text-sm">
                   <span className="w-4 h-4 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 shrink-0">
                     <Check className="w-2.5 h-2.5 stroke-[3]" />
@@ -127,11 +127,11 @@ export const Hero: React.FC = () => {
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md border border-teal-200 rounded-xl px-4 py-3 shadow-md flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-teal-600 shrink-0 shadow-xs" />
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-navy-900">
+                    <span className="text-xs font-bold uppercase tracking-wider text-navy-900">
                       In-House Rehabilitation
                     </span>
                   </div>
-                  <span className="text-xs font-extrabold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md border border-teal-200">
+                  <span className="text-xs font-bold text-teal-900 bg-teal-50 px-2.5 py-0.5 rounded-md border border-teal-200">
                     Active Care
                   </span>
                 </div>

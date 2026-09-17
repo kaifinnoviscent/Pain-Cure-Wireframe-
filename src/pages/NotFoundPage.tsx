@@ -11,13 +11,13 @@ export const NotFoundPage: React.FC = () => {
 
       <main className="flex-grow flex items-center justify-center py-24 sm:py-32">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-          <span className="text-xs sm:text-sm font-bold tracking-widest text-teal-800 uppercase block mb-4">
+          <span className="text-xs sm:text-sm font-bold tracking-wider text-teal-900 uppercase block mb-4">
             404 Error &bull; Page Not Found
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-[1.18] sm:leading-[1.15] mb-6">
             Page not found
           </h1>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal mb-10 max-w-lg mx-auto">
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal mb-10 max-w-lg mx-auto">
             Let's get you back to the clinic. The page you are looking for does not exist or may have been moved.
           </p>
 

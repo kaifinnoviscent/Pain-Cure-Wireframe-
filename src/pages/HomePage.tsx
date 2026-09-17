@@ -6,7 +6,6 @@ import { TreatmentDiscovery } from '../components/TreatmentDiscovery';
 import { ClinicPhilosophy } from '../components/ClinicPhilosophy';
 import { CareJourney } from '../components/CareJourney';
 import { RehabSection } from '../components/RehabSection';
-import { TestimonialsPlaceholder } from '../components/TestimonialsPlaceholder';
 import { PatientPortalTeaser } from '../components/PatientPortalTeaser';
 import { ConsultationCTA } from '../components/ConsultationCTA';
 import { Footer } from '../components/Footer';
@@ -24,7 +23,6 @@ export const HomePage: React.FC = () => {
         <ClinicPhilosophy />
         <CareJourney />
         <RehabSection />
-        <TestimonialsPlaceholder />
         <PatientPortalTeaser />
         <ConsultationCTA />
       </main>

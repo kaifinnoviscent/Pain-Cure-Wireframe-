@@ -44,14 +44,14 @@ export const TrustStrip: React.FC = () => {
                     </div>
                     <ArrowUpRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-teal-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150" />
                   </div>
-                  <span className="font-mono text-[10px] font-extrabold text-teal-800 tracking-wider block mb-0.5">
+                  <span className="text-xs font-bold text-teal-900 tracking-wide block mb-0.5">
                     {item.num}
                   </span>
                   <span className="text-xs sm:text-sm font-bold text-navy-900 group-hover:text-teal-900 transition-colors block tracking-tight leading-snug">
                     {item.label}
                   </span>
                 </div>
-                <span className="text-[11px] text-slate-500 group-hover:text-slate-700 transition-colors mt-2 leading-tight line-clamp-1">
+                <span className="text-xs text-slate-700 group-hover:text-slate-900 transition-colors mt-2 leading-snug line-clamp-1">
                   {item.desc}
                 </span>
               </Link>

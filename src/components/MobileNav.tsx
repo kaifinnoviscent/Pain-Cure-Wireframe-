@@ -207,7 +207,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, returnFoc
           </Link>
 
           <div className="pt-2">
-            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Connect on Instagram</span>
+            <span className="text-xs font-bold text-slate-600 uppercase tracking-wider block mb-2">Connect on Instagram</span>
             <div className="flex flex-col space-y-1.5">
               {CLINIC_INFO.instagram.map((item) => (
                 <a
@@ -215,9 +215,9 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, returnFoc
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xs font-medium text-slate-600 hover:text-teal-700 py-1 min-h-[44px]"
+                  className="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-teal-800 py-1 min-h-[44px]"
                 >
-                  <Instagram className="w-3.5 h-3.5 text-teal-600" />
+                  <Instagram className="w-4 h-4 text-teal-700 shrink-0" />
                   <span>{item.handle}</span>
                 </a>
               ))}

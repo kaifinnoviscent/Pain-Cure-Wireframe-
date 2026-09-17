@@ -20,7 +20,7 @@ export const KneeTreatmentPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Link
               to="/treatments"
-              className="inline-flex items-center gap-2 text-xs font-bold text-teal-700 hover:text-teal-800 uppercase tracking-wider group"
+              className="inline-flex items-center gap-2 text-xs font-bold text-teal-800 hover:text-teal-950 uppercase tracking-wider group"
             >
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
               <span>Back to Treatments</span>
@@ -29,18 +29,18 @@ export const KneeTreatmentPage: React.FC = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 sm:py-16 bg-white">
+        <section className="py-10 sm:py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               
               <div className="lg:col-span-7">
-                <span className="text-xs sm:text-sm font-bold tracking-widest text-teal-800 uppercase block mb-3">
+                <span className="text-xs sm:text-sm font-bold tracking-wider text-teal-900 uppercase block mb-3">
                   {knee.number} &bull; {knee.disciplineLabel}
                 </span>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-[1.18] sm:leading-[1.15] mb-6">
                   {knee.name}
                 </h1>
-                <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal mb-8">
+                <p className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl font-normal mb-6">
                   {knee.whatItIs}
                 </p>
 
@@ -78,17 +78,17 @@ export const KneeTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 1: What It Addresses */}
-        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-10 sm:py-12 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-5">
-                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+                <span className="text-xs font-bold tracking-wider text-teal-900 uppercase block mb-2">
                   What It Addresses
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
                   Knee Conditions &amp; Symptoms Evaluated
                 </h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
                   {knee.whoItIsFor}
                 </p>
               </div>
@@ -112,17 +112,17 @@ export const KneeTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 2: Pathways Section */}
-        <section id="care-pathways" className="py-12 sm:py-16 bg-white border-t border-slate-200/80">
+        <section id="care-pathways" className="py-10 sm:py-12 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div className="max-w-3xl mb-8 sm:mb-10">
-              <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+            <div className="max-w-3xl mb-6 sm:mb-7">
+              <span className="text-xs font-bold tracking-wider text-teal-900 uppercase block mb-2">
                 Clinical Pathways
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
                 Non-operative &amp; surgical options.
               </h2>
-              <p className="mt-4 text-base text-slate-600 leading-relaxed font-normal">
+              <p className="mt-4 text-base text-slate-700 leading-relaxed font-normal">
                 {knee.careInvolves}
               </p>
             </div>
@@ -130,12 +130,12 @@ export const KneeTreatmentPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               
               {/* NON-OPERATIVE PATHWAY */}
-              <div className="lg:col-span-7 bg-white border border-teal-100 rounded-2xl p-7 sm:p-10 shadow-card">
-                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-teal-50">
+              <div className="lg:col-span-7 bg-white border border-teal-100 rounded-2xl p-6 sm:p-8 shadow-card">
+                <div className="flex items-center gap-3 mb-5 pb-3.5 border-b border-teal-50">
                   <div className="w-8 h-8 rounded-lg bg-teal-50 border border-teal-200 text-teal-700 flex items-center justify-center">
                     <Activity className="w-4 h-4" />
                   </div>
-                  <span className="text-xs font-extrabold tracking-widest text-teal-800 uppercase">
+                  <span className="text-xs font-bold tracking-wider text-teal-900 uppercase">
                     Conservative First Line
                   </span>
                 </div>
@@ -143,15 +143,15 @@ export const KneeTreatmentPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-navy-900 tracking-tight mb-3">
                   Non-Operative Modalities
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                <p className="text-sm text-slate-700 leading-relaxed mb-5 font-normal">
                   Non-operative management aims to manage discomfort and support joint mobility without surgery wherever the clinical condition permits.
                 </p>
 
-                <div className="space-y-3.5">
+                <div className="space-y-3">
                   {knee.nonOperative?.map((item) => (
                     <div
                       key={item}
-                      className="p-4 sm:p-4.5 bg-teal-50/40 rounded-xl border border-teal-100/80 flex items-center justify-between shadow-2xs"
+                      className="p-3.5 sm:p-4 bg-teal-50/40 rounded-xl border border-teal-100/80 flex items-center justify-between shadow-2xs"
                     >
                       <h4 className="text-base font-bold text-navy-900">
                         {item}
@@ -165,13 +165,13 @@ export const KneeTreatmentPage: React.FC = () => {
               </div>
 
               {/* OPERATIVE PATHWAY */}
-              <div className="lg:col-span-5 bg-white border border-slate-200/90 rounded-2xl p-7 sm:p-10 shadow-card flex flex-col justify-between">
+              <div className="lg:col-span-5 bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 shadow-card flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3 mb-5 pb-3.5 border-b border-slate-100">
                     <div className="w-8 h-8 rounded-lg bg-slate-100 border border-slate-200 text-navy-800 flex items-center justify-center">
                       <Stethoscope className="w-4 h-4" />
                     </div>
-                    <span className="text-xs font-extrabold tracking-widest text-slate-500 uppercase">
+                    <span className="text-xs font-bold tracking-wider text-slate-700 uppercase">
                       Surgical Care
                     </span>
                   </div>
@@ -179,30 +179,30 @@ export const KneeTreatmentPage: React.FC = () => {
                   <h3 className="text-2xl font-bold text-navy-900 tracking-tight mb-3">
                     Operative Pathway
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+                  <p className="text-sm text-slate-700 leading-relaxed mb-5 font-normal">
                     When conservative measures are insufficient and joint wear is localized, operative intervention is considered.
                   </p>
 
-                  <div className="p-5 bg-slate-50 rounded-xl border border-slate-200/80 mb-6 shadow-2xs">
-                    <span className="text-xs font-bold text-teal-700 uppercase tracking-wider block mb-2">
+                  <div className="p-4 sm:p-5 bg-slate-50 rounded-xl border border-slate-200/80 shadow-2xs">
+                    <span className="text-xs font-bold text-teal-800 uppercase tracking-wider block mb-1.5">
                       Operative Procedure
                     </span>
-                    <h4 className="text-lg font-bold text-navy-900">
+                    <h4 className="text-base sm:text-lg font-bold text-navy-900">
                       Unicondylar knee replacement
                     </h4>
-                    <p className="text-xs text-slate-600 mt-2 leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-slate-700 mt-2 leading-relaxed font-normal">
                       Partial knee replacement targeting the affected compartment of the knee joint. Supported by in-house{' '}
-                      <Link to="/post-operative-rehab" className="text-teal-700 hover:text-teal-900 font-semibold underline decoration-teal-300 underline-offset-2">
+                      <Link to="/post-operative-rehab" className="text-teal-800 hover:text-teal-950 font-bold underline decoration-teal-500 underline-offset-2">
                         post-operative rehabilitation
                       </Link>.
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-4 pt-6 border-t border-slate-100">
+                <div className="mt-5 pt-4 border-t border-slate-100">
                   <Link
                     to={CONSULTATION_PATH}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-teal-700 hover:text-teal-800 group"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-teal-800 hover:text-teal-950 group"
                   >
                     <span>Discuss Knee Treatment with Our Team</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -215,25 +215,69 @@ export const KneeTreatmentPage: React.FC = () => {
           </div>
         </section>
 
-        {/* SECTION 3: What to Expect */}
-        <section className="py-10 sm:py-12 bg-slate-50/60 border-t border-slate-200/80">
+        {/* SECTION 3: Patient Guidance & What to Expect */}
+        <section className="pt-10 sm:pt-12 pb-0 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-              <div className="lg:col-span-4">
-                <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
+            
+            {/* Section Heading Area — Sitting Naturally Above the Panel */}
+            <div className="max-w-3xl mb-6 sm:mb-8">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-teal-50 border border-teal-200/90 mb-3 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-teal-600" aria-hidden="true" />
+                <span className="text-xs font-bold tracking-wider text-teal-900 uppercase">
                   Patient Guidance
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
-                  What to Expect
-                </h2>
               </div>
-              <div className="lg:col-span-8 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 tracking-tight mb-3">
+                What to Expect
+              </h2>
+              <div className="w-12 h-1 bg-gradient-to-r from-teal-600 to-teal-400 rounded-full" aria-hidden="true" />
+            </div>
+
+            {/* Main Mint/Teal Graphic Feature Panel */}
+            <div className="relative rounded-2xl sm:rounded-3xl border border-teal-300/90 bg-gradient-to-br from-[#D7F4EE] via-[#E2F7F2] to-[#CCEFE7] overflow-hidden shadow-[0_4px_24px_-4px_rgba(13,139,131,0.15)]">
+              
+              {/* Solid Left Teal Accent Strip */}
+              <div className="absolute left-0 top-0 bottom-0 w-2.5 sm:w-3.5 bg-teal-600 z-20" aria-hidden="true" />
+
+              {/* Decorative Architectural / Geometric Graphics */}
+              {/* Top Right Dot Matrix Grid */}
+              <div className="absolute top-6 right-6 sm:top-8 sm:right-8 opacity-20 select-none pointer-events-none hidden sm:block" aria-hidden="true">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="6" cy="6" r="2.5" className="fill-teal-800" />
+                  <circle cx="26" cy="6" r="2.5" className="fill-teal-800" />
+                  <circle cx="46" cy="6" r="2.5" className="fill-teal-800" />
+                  <circle cx="66" cy="6" r="2.5" className="fill-teal-800" />
+                  <circle cx="6" cy="26" r="2.5" className="fill-teal-800" />
+                  <circle cx="26" cy="26" r="2.5" className="fill-teal-800" />
+                  <circle cx="46" cy="26" r="2.5" className="fill-teal-800" />
+                  <circle cx="66" cy="26" r="2.5" className="fill-teal-800" />
+                  <circle cx="6" cy="46" r="2.5" className="fill-teal-800" />
+                  <circle cx="26" cy="46" r="2.5" className="fill-teal-800" />
+                  <circle cx="46" cy="46" r="2.5" className="fill-teal-800" />
+                  <circle cx="66" cy="46" r="2.5" className="fill-teal-800" />
+                  <circle cx="6" cy="66" r="2.5" className="fill-teal-800" />
+                  <circle cx="26" cy="66" r="2.5" className="fill-teal-800" />
+                  <circle cx="46" cy="66" r="2.5" className="fill-teal-800" />
+                  <circle cx="66" cy="66" r="2.5" className="fill-teal-800" />
+                </svg>
+              </div>
+
+              {/* Bottom Right Overlapping Concentric Arcs & Geometric Shapes */}
+              <div className="absolute -bottom-20 -right-20 w-72 h-72 sm:w-96 sm:h-96 rounded-full border-[32px] sm:border-[44px] border-teal-500/10 sm:border-teal-500/15 select-none pointer-events-none hidden sm:block" aria-hidden="true" />
+              <div className="absolute bottom-0 right-0 w-28 h-28 sm:w-60 sm:h-60 rounded-tl-full bg-teal-500/10 sm:bg-teal-500/15 select-none pointer-events-none" aria-hidden="true" />
+              <div className="absolute bottom-0 right-0 w-12 h-10 sm:w-28 sm:h-20 bg-teal-600/10 sm:bg-teal-600/15 select-none pointer-events-none" aria-hidden="true" />
+
+              {/* Clinical Reading Content Surface */}
+              <div className="relative z-10 pl-6 sm:pl-10 lg:pl-12 pr-6 sm:pr-10 lg:pr-14 py-6 sm:py-8 lg:py-9 max-w-4xl space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-[16.5px] text-navy-950 leading-relaxed font-normal">
                 <p>{knee.patientExpectation}</p>
+                <div className="border-t border-teal-700/20 my-3" aria-hidden="true" />
                 <p>
                   Whether managed conservatively or through surgical replacement, rehabilitation is focused on restoring joint function and helping you resume daily activities with confidence.
                 </p>
               </div>
+
             </div>
+
           </div>
         </section>
 

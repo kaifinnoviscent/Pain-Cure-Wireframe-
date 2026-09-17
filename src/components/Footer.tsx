@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Instagram, Shield, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Instagram, Shield, MapPin, Phone, Clock } from 'lucide-react';
 import { CLINIC_INFO, CONSULTATION_PATH } from '../data/clinicalData';
 const logoUrl = '/pain-cure-og.png';
 
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-16 sm:pt-20 pb-12 border-t border-slate-800">
+    <footer className="bg-slate-900 text-slate-300 pt-10 sm:pt-12 pb-10 sm:pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Calm, Spacious 3-Part Editorial Layout */}
@@ -39,15 +39,15 @@ export const Footer: React.FC = () => {
               />
             </Link>
             
-            <p className="text-base text-slate-300 leading-relaxed font-normal max-w-md">
+            <p className="text-base text-slate-200 leading-relaxed font-normal max-w-md">
               Personalised orthopaedic care and in-house rehabilitation focused on restoring movement, function, and everyday confidence.
             </p>
 
             {/* Verified Clinic NAP */}
-            <div className="pt-2 space-y-3 text-sm text-slate-400 border-t border-slate-800/80 max-w-md">
+            <div className="pt-2 space-y-3 text-sm text-slate-300 border-t border-slate-800/80 max-w-md">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-1" />
-                <address className="not-italic text-slate-300 leading-relaxed text-sm">
+                <address className="not-italic text-slate-200 leading-relaxed text-sm">
                   {CLINIC_INFO.addressLines[0]}<br />
                   {CLINIC_INFO.addressLines[1]}
                 </address>
@@ -56,15 +56,23 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 text-teal-400 shrink-0" />
                 <a
                   href={CLINIC_INFO.phoneTel}
-                  className="text-slate-200 hover:text-teal-400 transition-colors font-medium font-mono text-sm"
+                  className="text-slate-100 hover:text-teal-300 transition-colors font-semibold text-sm"
                 >
                   {CLINIC_INFO.phoneDisplay}
                 </a>
               </div>
+              <div className="flex items-start gap-2.5">
+                <Clock className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
+                <div className="text-slate-200 text-sm">
+                  <span>{CLINIC_INFO.operatingHours.days}: </span>
+                  <span className="font-semibold text-slate-100">{CLINIC_INFO.operatingHours.hours}</span>
+                  <span className="text-xs text-slate-300 block mt-0.5">({CLINIC_INFO.operatingHours.closedDay}: Closed)</span>
+                </div>
+              </div>
             </div>
 
-            <div className="pt-1 flex flex-col space-y-2 text-sm text-slate-400">
-              <span className="font-semibold text-slate-300">Connect with us on Instagram:</span>
+            <div className="pt-1 flex flex-col space-y-2 text-sm text-slate-300">
+              <span className="font-semibold text-slate-200">Connect with us on Instagram:</span>
               <div className="flex flex-wrap items-center gap-4">
                 {CLINIC_INFO.instagram.map((item) => (
                   <a
@@ -72,7 +80,7 @@ export const Footer: React.FC = () => {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-slate-300 hover:text-teal-400 transition-colors font-medium"
+                    className="inline-flex items-center gap-2 text-slate-200 hover:text-teal-300 transition-colors font-medium"
                   >
                     <Instagram className="w-4 h-4 text-teal-400" />
                     <span>{item.handle}</span>
@@ -84,7 +92,7 @@ export const Footer: React.FC = () => {
 
           {/* Treatments Column (3 cols) */}
           <div className="md:col-span-3">
-            <h4 className="text-xs font-extrabold text-white uppercase tracking-widest mb-6">
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-6">
               Treatments
             </h4>
             <ul className="space-y-3.5 text-base">
@@ -92,7 +100,7 @@ export const Footer: React.FC = () => {
                 <li key={t.name}>
                   <Link
                     to={t.slug}
-                    className="text-slate-300 hover:text-teal-400 transition-colors block py-0.5"
+                    className="text-slate-200 hover:text-teal-300 transition-colors block py-0.5"
                   >
                     {t.name}
                   </Link>
@@ -101,7 +109,7 @@ export const Footer: React.FC = () => {
               <li className="pt-2">
                 <Link
                   to="/treatments"
-                  className="text-teal-400 hover:text-teal-300 transition-colors block py-0.5 font-semibold text-sm"
+                  className="text-teal-300 hover:text-teal-200 transition-colors block py-0.5 font-semibold text-sm"
                 >
                   View All Treatments &rarr;
                 </Link>
@@ -112,7 +120,7 @@ export const Footer: React.FC = () => {
           {/* Clinic & Consultation CTA Column (4 cols) */}
           <div className="md:col-span-4 flex flex-col justify-between">
             <div>
-              <h4 className="text-xs font-extrabold text-white uppercase tracking-widest mb-6">
+              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-6">
                 Clinic
               </h4>
               <ul className="space-y-3.5 text-base">
@@ -120,7 +128,7 @@ export const Footer: React.FC = () => {
                   <li key={c.name}>
                     <Link
                       to={c.slug}
-                      className="text-slate-300 hover:text-teal-400 transition-colors block py-0.5"
+                      className="text-slate-200 hover:text-teal-300 transition-colors block py-0.5"
                     >
                       {c.name}
                     </Link>
@@ -143,9 +151,9 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Disclaimer & Bottom Row (Clear, Legible Type) */}
-        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs sm:text-sm text-slate-300">
           <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4 text-teal-500 shrink-0" />
+            <Shield className="w-4 h-4 text-teal-400 shrink-0" />
             <p>
               Medical Disclaimer: Information on this website is for educational and introductory purposes only and does not substitute professional clinical consultation.
             </p>

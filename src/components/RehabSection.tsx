@@ -11,7 +11,7 @@ export const RehabSection: React.FC = () => {
     <section 
       id="rehab" 
       ref={sectionRef}
-      className="py-12 sm:py-16 bg-[#041628] text-white relative overflow-hidden border-b border-navy-900"
+      className="py-10 sm:py-12 bg-[#041628] text-white relative overflow-hidden border-b border-navy-900"
       aria-label="Clinical Rehabilitation"
     >
       {/* Ambient background contrast glow */}
@@ -25,7 +25,7 @@ export const RehabSection: React.FC = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           
           {/* Left Column: Narrative & Factual Points */}
           <div className="lg:col-span-6 flex flex-col items-start">
@@ -35,7 +35,7 @@ export const RehabSection: React.FC = () => {
               }`}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-teal-400" aria-hidden="true" />
-              <span className="font-mono text-xs font-extrabold tracking-widest text-teal-400 uppercase">
+              <span className="text-xs font-bold tracking-wider text-teal-300 uppercase">
                 Dedicated In-House Service
               </span>
             </div>
@@ -49,7 +49,7 @@ export const RehabSection: React.FC = () => {
             </h2>
 
             <div 
-              className={`space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed font-normal mb-7 transition-all duration-500 ease-out delay-[160ms] ${
+              className={`space-y-4 text-sm sm:text-base text-slate-200 leading-relaxed font-normal mb-5 transition-all duration-500 ease-out delay-[160ms] ${
                 isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
               }`}
             >
@@ -62,7 +62,7 @@ export const RehabSection: React.FC = () => {
             </div>
 
             <div 
-              className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 w-full transition-all duration-500 ease-out delay-[240ms] ${
+              className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 w-full transition-all duration-500 ease-out delay-[240ms] ${
                 isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
               }`}
             >
@@ -74,13 +74,13 @@ export const RehabSection: React.FC = () => {
               ].map((item, idx) => (
                 <div 
                   key={item} 
-                  className="p-3.5 bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 rounded-xl transition-colors duration-200 flex items-start gap-3"
+                  className="p-3.5 bg-white/[0.06] hover:bg-white/[0.09] border border-white/10 rounded-xl transition-colors duration-200 flex items-start gap-3"
                   style={{ transitionDelay: `${240 + idx * 80}ms` }}
                 >
                   <span className="w-5 h-5 rounded-full bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-300 shrink-0 mt-0.5">
                     <Check className="w-3 h-3 stroke-[2.5]" />
                   </span>
-                  <span className="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">{item}</span>
+                  <span className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed">{item}</span>
                 </div>
               ))}
             </div>
@@ -126,7 +126,7 @@ export const RehabSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-white tracking-wide">Supervised Recovery</p>
-                    <p className="text-[11px] text-teal-300/90 font-medium">In-Clinic Structured Sessions</p>
+                    <p className="text-xs text-teal-300 font-medium">In-Clinic Structured Sessions</p>
                   </div>
                 </div>
               </div>

@@ -44,27 +44,27 @@ export const CareJourney: React.FC = () => {
     <section 
       id="journey" 
       ref={sectionRef}
-      className="py-12 sm:py-16 bg-[#F4FBF9] border-b border-teal-100/90"
+      className="py-10 sm:py-12 bg-[#F4FBF9] border-b border-teal-100/90"
       aria-label="Care Philosophy and Patient Journey"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div 
-          className={`max-w-3xl mb-10 sm:mb-12 transition-all duration-500 ease-out ${
+          className={`max-w-3xl mb-6 sm:mb-8 transition-all duration-500 ease-out ${
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
           }`}
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white border border-teal-200/90 mb-3 shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-teal-600" aria-hidden="true" />
-            <span className="font-mono text-xs font-extrabold tracking-widest text-teal-800 uppercase">
+            <span className="text-xs font-bold tracking-wider text-teal-900 uppercase">
               Care Philosophy &amp; Journey
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight">
             From initial assessment to everyday movement.
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+          <p className="mt-3 text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
             A patient-centred philosophy of care: understanding your condition, considering appropriate options, and supporting your recovery step by step. Individual clinical pathways are determined by specific patient needs.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const CareJourney: React.FC = () => {
                   <div>
                     {/* Card Header: Step number badge and semantic icon */}
                     <div className="flex items-center justify-between gap-2 mb-4">
-                      <span className="font-mono text-xs font-extrabold tracking-wider text-teal-800 px-2.5 py-1 rounded-md bg-teal-50 border border-teal-200/60">
+                      <span className="text-xs font-bold tracking-wider text-teal-900 px-2.5 py-1 rounded-md bg-teal-50 border border-teal-200/60">
                         {stage.num}
                       </span>
                       <div className="w-9 h-9 rounded-xl bg-teal-50 border border-teal-100 text-teal-700 flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-colors duration-200">
@@ -92,7 +92,7 @@ export const CareJourney: React.FC = () => {
                       </div>
                     </div>
 
-                    <span className="font-mono text-[11px] font-bold text-teal-700 uppercase tracking-wider block mb-1">
+                    <span className="text-xs font-bold text-teal-800 uppercase tracking-wider block mb-1">
                       {stage.tagline}
                     </span>
 
@@ -100,7 +100,7 @@ export const CareJourney: React.FC = () => {
                       {stage.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                    <p className="text-sm text-slate-700 leading-relaxed font-normal">
                       {stage.desc}
                     </p>
                   </div>
@@ -122,15 +122,15 @@ export const CareJourney: React.FC = () => {
                 }`}
               >
                 {/* Timeline Node */}
-                <div className={`absolute -left-[37px] sm:-left-[41px] top-3 w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 transition-all duration-500 font-mono font-bold text-[11px] sm:text-xs flex items-center justify-center shadow-xs ${
-                  isInView ? 'bg-white border-teal-600 text-teal-800 ring-2 ring-teal-100' : 'bg-white border-slate-300 text-slate-400'
+                <div className={`absolute -left-[37px] sm:-left-[41px] top-3 w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 transition-all duration-500 font-bold text-xs flex items-center justify-center shadow-xs ${
+                  isInView ? 'bg-white border-teal-600 text-teal-900 ring-2 ring-teal-100' : 'bg-white border-slate-300 text-slate-500'
                 }`}>
                   {stage.num}
                 </div>
 
                 <div className="bg-white rounded-xl p-5 border border-teal-100 shadow-card">
                   <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="font-mono text-[10px] sm:text-xs font-bold text-teal-700 uppercase tracking-wider">
+                    <span className="text-xs font-bold text-teal-800 uppercase tracking-wider">
                       {stage.tagline}
                     </span>
                     <IconComponent className="w-4 h-4 text-teal-600" />
@@ -140,7 +140,7 @@ export const CareJourney: React.FC = () => {
                     {stage.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
                     {stage.desc}
                   </p>
                 </div>

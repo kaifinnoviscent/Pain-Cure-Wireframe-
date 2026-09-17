@@ -2,6 +2,13 @@ import React from 'react';
 import { CLINIC_INFO } from '../data/clinicalData';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../data/seoData';
 
+export interface OpeningHoursSpecificationSchema {
+  '@type': 'OpeningHoursSpecification';
+  dayOfWeek: string[];
+  opens: string;
+  closes: string;
+}
+
 export interface MedicalClinicSchema {
   '@context': 'https://schema.org';
   '@type': 'MedicalClinic';
@@ -19,6 +26,7 @@ export interface MedicalClinicSchema {
     postalCode?: string;
     addressCountry: string;
   };
+  openingHoursSpecification?: OpeningHoursSpecificationSchema[];
 }
 
 export const CLINIC_JSON_LD: MedicalClinicSchema = {
@@ -37,6 +45,14 @@ export const CLINIC_JSON_LD: MedicalClinicSchema = {
     addressRegion: 'Maharashtra',
     addressCountry: 'IN',
   },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: CLINIC_INFO.operatingHours.schemaDays,
+      opens: CLINIC_INFO.operatingHours.opens,
+      closes: CLINIC_INFO.operatingHours.closes,
+    },
+  ],
 };
 
 interface JsonLdProps {

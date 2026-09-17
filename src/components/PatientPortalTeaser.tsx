@@ -13,7 +13,7 @@ export const PatientPortalTeaser: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
-          className={`bg-gradient-to-r from-white via-white to-teal-50/50 rounded-2xl border border-teal-200/90 shadow-card p-6 sm:p-8 lg:p-10 transition-all duration-600 ease-out ${
+          className={`bg-gradient-to-r from-white via-white to-teal-50/50 rounded-2xl border border-teal-200/90 shadow-card p-6 sm:p-7 lg:p-8 transition-all duration-600 ease-out ${
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
           }`}
         >
@@ -23,13 +23,13 @@ export const PatientPortalTeaser: React.FC = () => {
             </div>
 
             <div className="border-l-0 sm:border-l-2 sm:border-teal-300 sm:pl-6">
-              <span className="font-mono text-xs font-extrabold uppercase tracking-widest text-teal-800 block mb-1.5">
+              <span className="text-xs font-bold uppercase tracking-wider text-teal-900 block mb-1.5">
                 Planned Digital Experience &bull; Future Stage
               </span>
               <h3 className="text-xl sm:text-2xl font-extrabold text-navy-900 tracking-tight mb-2">
                 Your care, connected.
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-4xl">
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal max-w-4xl">
                 A secure patient portal is planned for a future stage of the clinic’s digital service, designed to provide registered patients with direct, authenticated access to appointments, clinical reports, and individual rehabilitation guidance.
               </p>
             </div>

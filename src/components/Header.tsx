@@ -218,13 +218,13 @@ export const Header: React.FC = () => {
                 <div className="grid grid-cols-12 gap-8 items-start">
                   {/* Left Column: Short Editorial Intro */}
                   <div className="col-span-12 md:col-span-4 border-b md:border-b-0 md:border-r border-slate-100 pb-6 md:pb-0 md:pr-6">
-                    <span className="text-xs font-extrabold tracking-widest text-teal-800 uppercase block mb-2">
+                    <span className="text-xs font-bold tracking-wider text-teal-900 uppercase block mb-2">
                       Treatments
                     </span>
-                    <h3 className="text-xl font-extrabold text-navy-900 tracking-tight leading-snug mb-3">
+                    <h3 className="text-xl font-bold text-navy-900 tracking-tight leading-snug mb-3">
                       Explore care by area.
                     </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed font-normal mb-6">
+                    <p className="text-sm text-slate-700 leading-relaxed font-normal mb-6">
                       Dedicated clinical disciplines spanning joint care, interventional procedures, and in-house rehabilitation.
                     </p>
                     <Link
@@ -245,13 +245,13 @@ export const Header: React.FC = () => {
                           key={item.slug}
                           to={item.slug}
                           onClick={() => setIsDropdownOpen(false)}
-                          className="group px-2 py-3 rounded-xl hover:bg-slate-50 transition-colors flex items-baseline gap-3"
+                          className="group px-2.5 py-3 rounded-xl hover:bg-slate-50 transition-colors flex items-baseline gap-3"
                         >
-                          <span className="text-xs font-mono font-bold text-teal-700 shrink-0 w-6">
+                          <span className="text-xs font-bold text-teal-800 shrink-0 w-6">
                             {item.num}
                           </span>
                           <div>
-                            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block leading-none mb-0.5">
+                            <span className="text-xs font-bold text-slate-600 uppercase tracking-wider block leading-none mb-1">
                               {item.category}
                             </span>
                             <span className="text-base font-bold text-navy-900 group-hover:text-teal-700 transition-colors leading-tight">

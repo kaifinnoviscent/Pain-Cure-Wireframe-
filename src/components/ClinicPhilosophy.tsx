@@ -33,14 +33,14 @@ export const ClinicPhilosophy: React.FC = () => {
     <section 
       id="philosophy" 
       ref={sectionRef}
-      className="py-12 sm:py-16 bg-[#E6F3EF] border-b border-teal-200/90 text-slate-800"
+      className="py-10 sm:py-12 bg-[#E6F3EF] border-b border-teal-200/90 text-slate-800"
       aria-label="Clinic Philosophy"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           
           {/* Left Column: Editorial Headline & Narrative */}
-          <div className="lg:col-span-6 flex flex-col justify-between h-full">
+          <div className="lg:col-span-6 flex flex-col">
             <div>
               <div 
                 className={`inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/80 border border-teal-200/80 mb-4 transition-all duration-500 ease-out ${
@@ -48,13 +48,13 @@ export const ClinicPhilosophy: React.FC = () => {
                 }`}
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-700" aria-hidden="true" />
-                <span className="font-mono text-xs font-extrabold tracking-widest text-teal-800 uppercase">
+                <span className="text-xs font-bold tracking-wider text-teal-900 uppercase">
                   Clinic Philosophy
                 </span>
               </div>
               
               <h2 
-                className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-6 transition-all duration-500 ease-out delay-[80ms] ${
+                className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4 sm:mb-5 transition-all duration-500 ease-out delay-[80ms] ${
                   isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
                 }`}
               >
@@ -62,7 +62,7 @@ export const ClinicPhilosophy: React.FC = () => {
               </h2>
               
               <div 
-                className={`space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal transition-all duration-500 ease-out delay-[160ms] ${
+                className={`space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed font-normal transition-all duration-500 ease-out delay-[160ms] ${
                   isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
                 }`}
               >
@@ -77,7 +77,7 @@ export const ClinicPhilosophy: React.FC = () => {
 
             {/* Factual Integration Callout */}
             <div 
-              className={`mt-8 p-5 sm:p-6 rounded-2xl bg-white/90 border border-teal-200/90 shadow-card transition-all duration-500 ease-out delay-[240ms] ${
+              className={`mt-6 p-5 sm:p-6 rounded-2xl bg-white/90 border border-teal-200/90 shadow-card transition-all duration-500 ease-out delay-[240ms] ${
                 isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
               }`}
             >
@@ -89,7 +89,7 @@ export const ClinicPhilosophy: React.FC = () => {
                   <h4 className="text-sm font-bold text-navy-900 tracking-tight mb-1">
                     Integrated Care Under One Roof
                   </h4>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
                     Initial clinical evaluation, non-operative therapies, and post-operative rehabilitation are managed as a continuous, unified recovery journey.
                   </p>
                 </div>
@@ -123,7 +123,7 @@ export const ClinicPhilosophy: React.FC = () => {
 
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2.5 mb-1.5">
-                        <span className="font-mono text-xs font-extrabold tracking-wider text-teal-800 uppercase px-2 py-0.5 rounded bg-teal-50/80 border border-teal-200/50">
+                        <span className="text-xs font-bold tracking-wider text-teal-900 uppercase px-2 py-0.5 rounded bg-teal-50/80 border border-teal-200/50">
                           {p.num}
                         </span>
                         <h3 className="text-base sm:text-lg font-bold text-navy-900 tracking-tight">
@@ -131,7 +131,7 @@ export const ClinicPhilosophy: React.FC = () => {
                         </h3>
                       </div>
 
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
                         {p.desc}
                       </p>
                     </div>

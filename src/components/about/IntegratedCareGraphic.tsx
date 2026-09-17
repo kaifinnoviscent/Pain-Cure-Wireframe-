@@ -30,10 +30,10 @@ export const IntegratedCareGraphic: React.FC = () => {
     >
       {/* Header bar */}
       <div className="flex items-center justify-between gap-3 pb-4 mb-6 border-b border-slate-200/80">
-        <span className="text-xs font-mono font-bold tracking-widest text-teal-800 uppercase">
+        <span className="text-xs font-bold tracking-wider text-teal-900 uppercase">
           INTEGRATED CARE PATHWAY
         </span>
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-700 text-xs font-medium shadow-2xs">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-800 text-xs font-medium shadow-2xs">
           <ShieldCheck className="w-3.5 h-3.5 text-teal-700 shrink-0" />
           <span>Under One Roof</span>
         </div>
@@ -67,14 +67,14 @@ export const IntegratedCareGraphic: React.FC = () => {
               {/* Text content */}
               <div className="min-w-0 pt-0.5">
                 <div className="flex items-baseline gap-2 mb-1">
-                  <span className="font-mono text-xs font-bold text-teal-800">
+                  <span className="text-xs font-bold text-teal-900">
                     STAGE {step.num}
                   </span>
                   <h3 className="text-base sm:text-lg font-bold text-navy-900 tracking-tight leading-snug">
                     {step.title}
                   </h3>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
                   {step.subtitle}
                 </p>
               </div>
@@ -84,7 +84,7 @@ export const IntegratedCareGraphic: React.FC = () => {
       </div>
 
       {/* Reassurance Footer */}
-      <div className="pt-5 mt-6 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-500">
+      <div className="pt-5 mt-6 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-600">
         <span>Continuous clinical oversight from initial consult through recovery.</span>
       </div>
     </div>

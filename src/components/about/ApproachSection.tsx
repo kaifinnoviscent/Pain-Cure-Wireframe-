@@ -31,38 +31,34 @@ export const ApproachSection: React.FC<ApproachSectionProps> = ({ isActive = tru
   return (
     <section
       id="approach"
-      className="w-full bg-[#E6F3EF] border-y border-teal-200/80 scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 py-12 sm:py-16 text-slate-800"
+      className="w-full bg-[#E6F3EF] border-y border-teal-200/80 scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 py-10 sm:py-12 text-slate-800"
       aria-label="Our Approach to Pain Care"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="xl:grid xl:grid-cols-[160px_minmax(0,1fr)] xl:gap-12 2xl:gap-16 items-start">
-          {/* Desktop Spacer Column matching 160px sticky chapter index */}
-          <div className="hidden xl:block" aria-hidden="true" />
-
-          {/* Section Main Content */}
-          <div className="min-w-0">
+        {/* Section Main Content */}
+        <div className="min-w-0">
             {/* Section Header */}
             <div 
-              className={`flex items-center gap-4 pb-4 border-b border-teal-200 mb-10 sm:mb-14 transition-all ${
+              className={`flex items-center gap-4 pb-4 border-b border-teal-200 mb-6 sm:mb-8 transition-all ${
                 isActive 
                   ? 'duration-500 ease-out delay-0 opacity-100 translate-y-0' 
                   : 'duration-200 ease-in delay-0 opacity-0 translate-y-5'
               }`}
             >
-              <span className="text-xs sm:text-sm font-mono font-extrabold tracking-widest text-teal-800 uppercase">
+              <span className="text-xs sm:text-sm font-bold tracking-wider text-teal-900 uppercase">
                 02 &mdash; OUR APPROACH
               </span>
               <div className="h-px bg-teal-200 flex-grow" aria-hidden="true" />
             </div>
 
             {/* Narrative Block */}
-            <div className="max-w-3xl mb-12 sm:mb-16">
-              <span className="text-xs font-mono font-bold tracking-widest text-teal-800 uppercase block mb-3">
+            <div className="max-w-3xl mb-7 sm:mb-9">
+              <span className="text-xs font-bold tracking-wider text-teal-900 uppercase block mb-3">
                 DIAGNOSTIC RIGOR BEFORE TREATMENT
               </span>
 
               <h2 
-                className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-[1.12] mb-5 transition-all ${
+                className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-[1.15] sm:leading-[1.12] mb-5 transition-all ${
                   isActive 
                     ? 'duration-500 ease-out delay-[100ms] opacity-100 translate-y-0' 
                     : 'duration-200 ease-in delay-0 opacity-0 translate-y-5'
@@ -71,7 +67,7 @@ export const ApproachSection: React.FC<ApproachSectionProps> = ({ isActive = tru
                 Understanding the Factors Behind Pain
               </h2>
               <div 
-                className={`space-y-4 text-base sm:text-lg text-slate-700 leading-relaxed font-normal transition-all ${
+                className={`space-y-4 text-base sm:text-lg text-slate-800 leading-relaxed font-normal transition-all ${
                   isActive 
                     ? 'duration-500 ease-out delay-[180ms] opacity-100 translate-y-0' 
                     : 'duration-200 ease-in delay-0 opacity-0 translate-y-5'
@@ -89,7 +85,7 @@ export const ApproachSection: React.FC<ApproachSectionProps> = ({ isActive = tru
             {/* Contributing Factors: Editorial 2-Column Clinical Rows with Dividing Rules */}
             <div className="pt-2">
               <span 
-                className={`text-xs font-mono font-extrabold tracking-widest text-teal-800 uppercase block mb-8 transition-all ${
+                className={`text-xs font-bold tracking-wider text-teal-900 uppercase block mb-4 transition-all ${
                   isActive 
                     ? 'duration-500 ease-out delay-[200ms] opacity-100 translate-y-0' 
                     : 'duration-200 ease-in delay-0 opacity-0 translate-y-5'
@@ -98,15 +94,15 @@ export const ApproachSection: React.FC<ApproachSectionProps> = ({ isActive = tru
                 CONTRIBUTING FACTORS EVALUATED
               </span>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 sm:gap-y-8">
                 {clinicalFactors.map((item) => (
                   <div 
-                    key={item.num}
+                    key={item.num} 
                     className="border-t border-teal-200/80 pt-5 flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center gap-2.5 mb-2.5">
-                        <span className="font-mono text-xs font-extrabold text-teal-800">
+                        <span className="text-xs font-bold text-teal-900">
                           FACTOR {item.num}
                         </span>
                       </div>
@@ -115,7 +111,7 @@ export const ApproachSection: React.FC<ApproachSectionProps> = ({ isActive = tru
                         {item.title}
                       </h3>
                       
-                      <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                      <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
                         {item.desc}
                       </p>
                     </div>
@@ -125,7 +121,6 @@ export const ApproachSection: React.FC<ApproachSectionProps> = ({ isActive = tru
             </div>
 
           </div>
-        </div>
       </div>
     </section>
   );

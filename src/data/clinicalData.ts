@@ -234,13 +234,27 @@ export const CLINIC_INFO = {
     { handle: '@paincureortho', url: 'https://www.instagram.com/paincureortho/' },
     { handle: '@merchantdrmohsin', url: 'https://www.instagram.com/merchantdrmohsin/' },
   ],
-  // Verified details and unverified fields (email & timings disabled from UI)
+  // Verified clinic operating schedule
+  operatingHours: {
+    days: 'Monday – Saturday',
+    hours: '10:00 AM – 10:00 PM',
+    closedDay: 'Sunday',
+    opens: '10:00',
+    closes: '22:00',
+    schemaDays: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ],
+  },
+  // Unverified fields — disabled from rendered UI
   placeholders: {
     phone: '+91 79778 68264',
     address: '42/44 Patra Chawl New Compound, Seth Motisa Lane, Opp. Sahakari Bhandar, Mazgoan, Mumbai - 10',
-    // Unverified fields — disabled from rendered UI:
     email: '[Unverified - Disabled]',
-    timings: '[Unverified - Disabled]',
   }
 };
 
