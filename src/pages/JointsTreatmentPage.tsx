@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ConsultationCTA } from '../components/ConsultationCTA';
-import { TREATMENTS } from '../data/clinicalData';
+import { TREATMENTS, CONSULTATION_PATH } from '../data/clinicalData';
 import jointsImg from '../assets/joints-treatment.jpg';
 
 export const JointsTreatmentPage: React.FC = () => {
@@ -79,7 +79,7 @@ export const JointsTreatmentPage: React.FC = () => {
 
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/contact"
+                    to={CONSULTATION_PATH}
                     className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-lg shadow-sm transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>Consult on Joint Pain</span>
@@ -187,18 +187,18 @@ export const JointsTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 3: What to Expect */}
-        <section className="py-12 sm:py-16 bg-slate-50/60 border-t border-slate-200/80">
+        <section className="py-10 sm:py-12 bg-slate-50/60 border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-              <div className="lg:col-span-5">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              <div className="lg:col-span-4">
                 <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
                   Patient Guidance
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
                   What to Expect
                 </h2>
               </div>
-              <div className="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+              <div className="lg:col-span-8 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 <p>{joints.patientExpectation}</p>
                 <p>
                   Management plans are tailored specifically to the joint affected and the underlying findings of your assessment, with physical modalities and exercises integrated where beneficial.

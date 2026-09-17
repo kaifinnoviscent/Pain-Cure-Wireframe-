@@ -146,7 +146,10 @@ export const ContactPage: React.FC = () => {
             </div>
 
             {/* ONE Primary Verified Contact Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch mb-8">
+            <div 
+              id="consultation"
+              className="scroll-mt-24 sm:scroll-mt-28 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch mb-8"
+            >
               
               {/* Channel 1: Telephone Consultation (Priority Action) */}
               <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-9 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">

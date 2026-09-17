@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ConsultationCTA } from '../components/ConsultationCTA';
-import { TREATMENTS } from '../data/clinicalData';
+import { TREATMENTS, CONSULTATION_PATH } from '../data/clinicalData';
 import spineImg from '../assets/spine-care.jpg';
 
 export const SpineTreatmentPage: React.FC = () => {
@@ -46,7 +46,7 @@ export const SpineTreatmentPage: React.FC = () => {
 
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/contact"
+                    to={CONSULTATION_PATH}
                     className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-lg shadow-sm transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>Consult on Spine Care</span>
@@ -201,21 +201,25 @@ export const SpineTreatmentPage: React.FC = () => {
         </section>
 
         {/* SECTION 4: What to Expect */}
-        <section className="py-12 sm:py-16 bg-white border-t border-slate-200/60">
+        <section className="py-10 sm:py-12 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-              <div className="lg:col-span-5">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              <div className="lg:col-span-4">
                 <span className="text-xs font-bold tracking-widest text-teal-800 uppercase block mb-2">
                   Patient Guidance
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-4">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
                   What to Expect
                 </h2>
               </div>
-              <div className="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+              <div className="lg:col-span-8 space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 <p>{spine.patientExpectation}</p>
                 <p>
-                  Where physiotherapy is recommended, this is integrated into the spine care pathway and provided in-house. All treatment decisions — whether conservative or surgical — are made on the basis of individual clinical assessment.
+                  Where{' '}
+                  <Link to="/treatments/physiotherapy" className="text-teal-700 hover:text-teal-900 font-semibold underline decoration-teal-300 underline-offset-2">
+                    physiotherapy
+                  </Link>{' '}
+                  is recommended, this is integrated into the spine care pathway and provided in-house. All treatment decisions — whether conservative or surgical — are made on the basis of individual clinical assessment.
                 </p>
               </div>
             </div>

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { TrustStrip } from '../components/TrustStrip';
@@ -10,10 +10,12 @@ import { TestimonialsPlaceholder } from '../components/TestimonialsPlaceholder';
 import { PatientPortalTeaser } from '../components/PatientPortalTeaser';
 import { ConsultationCTA } from '../components/ConsultationCTA';
 import { Footer } from '../components/Footer';
+import { JsonLd } from '../components/JsonLd';
 
 export const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-800 selection:bg-teal-600 selection:text-white">
+      <JsonLd />
       <Header />
       <main className="flex-grow">
         <Hero />

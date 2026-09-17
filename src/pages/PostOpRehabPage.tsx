@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, ShieldCheck, Activity, UserCheck }
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ConsultationCTA } from '../components/ConsultationCTA';
+import { CONSULTATION_PATH } from '../data/clinicalData';
 import rehabImg from '../assets/post-op-rehab.jpg';
 
 export const PostOpRehabPage: React.FC = () => {
@@ -65,7 +66,7 @@ export const PostOpRehabPage: React.FC = () => {
                   Dedicated In-House Service
                 </span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-                  In-house Post Operative Rehab
+                  In-house Post-Operative Rehab
                 </h1>
                 
                 <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-6">
@@ -84,7 +85,7 @@ export const PostOpRehabPage: React.FC = () => {
                 </div>
 
                 <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-8">
-                  Pain Cure provides dedicated in-house post-operative rehabilitation so that recovery is supervised within the same clinical environment. Care is tailored to each patient's procedure, healing progress, and personal rehabilitation goals.
+                  Pain Cure provides dedicated in-house post-operative rehabilitation so that recovery is supervised within the same clinical environment. Care is tailored to each patient's procedure — including <Link to="/treatments/knee" className="text-teal-300 hover:text-white underline decoration-teal-400/60 underline-offset-2 transition-colors">knee replacement</Link>, <Link to="/treatments/hip" className="text-teal-300 hover:text-white underline decoration-teal-400/60 underline-offset-2 transition-colors">hip surgery</Link>, and <Link to="/treatments/spine" className="text-teal-300 hover:text-white underline decoration-teal-400/60 underline-offset-2 transition-colors">spine care</Link> — healing progress, and personal rehabilitation goals.
                 </p>
 
                 <div className="space-y-3 mb-10 w-full">
@@ -98,7 +99,7 @@ export const PostOpRehabPage: React.FC = () => {
 
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/contact"
+                    to={CONSULTATION_PATH}
                     className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg transition-all duration-150 text-sm sm:text-base"
                   >
                     <span>Consult on Post-Op Care</span>

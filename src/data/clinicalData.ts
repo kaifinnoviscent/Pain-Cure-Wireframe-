@@ -221,7 +221,7 @@ export const CLINIC_INFO = {
   subheadline: 'Personalised orthopaedic treatment and rehabilitation focused on helping patients return to movement, everyday activities, and life with confidence.',
   phone: '7977868264',
   phoneDisplay: '+91 79778 68264',
-  phoneTel: 'tel:7977868264',
+  phoneTel: 'tel:+917977868264',
   address: '42/44 Patra Chawl New Compound, Seth Motisa Lane, Opp. Sahakari Bhandar, Mazgoan, Mumbai - 10',
   addressLines: [
     '42/44 Patra Chawl New Compound, Seth Motisa Lane,',
@@ -243,6 +243,8 @@ export const CLINIC_INFO = {
     timings: '[Unverified - Disabled]',
   }
 };
+
+export const CONSULTATION_PATH = '/contact#consultation';
 
 export interface DoctorStatistic {
   value: string;

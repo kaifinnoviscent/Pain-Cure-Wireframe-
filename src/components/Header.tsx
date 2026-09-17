@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, ArrowRight, ChevronDown } from 'lucide-react';
 import { MobileNav } from './MobileNav';
-const logoUrl = '/Pain Cure.png';
+import { CONSULTATION_PATH } from '../data/clinicalData';
+const logoUrl = '/pain-cure-og.png';
 
 export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,6 +17,15 @@ export const Header: React.FC = () => {
   const location = useLocation();
 
   const isTreatmentsActive = location.pathname.startsWith('/treatments');
+
+  const handleConsultationClick = () => {
+    if (location.pathname === '/contact') {
+      const element = document.getElementById('consultation');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -260,7 +270,8 @@ export const Header: React.FC = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              to="/contact"
+              to={CONSULTATION_PATH}
+              onClick={handleConsultationClick}
               className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white text-[15px] font-semibold px-6 py-3 rounded-xl shadow-sm hover:shadow transition-all duration-150 active:scale-[0.99] touch-target focus-visible:outline-teal-600"
             >
               <span>Request a Consultation</span>
@@ -271,7 +282,8 @@ export const Header: React.FC = () => {
           {/* Mobile Actions */}
           <div className="flex items-center gap-3 lg:hidden">
             <Link
-              to="/contact"
+              to={CONSULTATION_PATH}
+              onClick={handleConsultationClick}
               className="bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold px-3.5 py-2.5 rounded-xl touch-target flex items-center justify-center shadow-xs"
             >
               Consult

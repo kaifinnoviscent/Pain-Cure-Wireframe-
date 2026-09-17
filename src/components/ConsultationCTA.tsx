@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, MapPin } from 'lucide-react';
-import { CLINIC_INFO } from '../data/clinicalData';
+import { CLINIC_INFO, CONSULTATION_PATH } from '../data/clinicalData';
 import { useInView } from '../hooks/useInView';
 
 export const ConsultationCTA: React.FC = () => {
@@ -48,7 +48,7 @@ export const ConsultationCTA: React.FC = () => {
               {/* Primary Action Button */}
               <div className="mb-10 sm:mb-12">
                 <Link
-                  to="/contact"
+                  to={CONSULTATION_PATH}
                   className="group inline-flex items-center justify-center gap-3 bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-teal-500/25 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press text-sm sm:text-base min-h-[48px]"
                 >
                   <span>Request a Consultation</span>

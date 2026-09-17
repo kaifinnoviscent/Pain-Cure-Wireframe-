@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Instagram, Shield } from 'lucide-react';
-import { CLINIC_INFO } from '../data/clinicalData';
-const logoUrl = '/Pain Cure.png';
+import { ArrowRight, Instagram, Shield, MapPin, Phone } from 'lucide-react';
+import { CLINIC_INFO, CONSULTATION_PATH } from '../data/clinicalData';
+const logoUrl = '/pain-cure-og.png';
 
 export const Footer: React.FC = () => {
   const treatments = [
@@ -43,7 +43,27 @@ export const Footer: React.FC = () => {
               Personalised orthopaedic care and in-house rehabilitation focused on restoring movement, function, and everyday confidence.
             </p>
 
-            <div className="pt-2 flex flex-col space-y-2 text-sm text-slate-400">
+            {/* Verified Clinic NAP */}
+            <div className="pt-2 space-y-3 text-sm text-slate-400 border-t border-slate-800/80 max-w-md">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-1" />
+                <address className="not-italic text-slate-300 leading-relaxed text-sm">
+                  {CLINIC_INFO.addressLines[0]}<br />
+                  {CLINIC_INFO.addressLines[1]}
+                </address>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-teal-400 shrink-0" />
+                <a
+                  href={CLINIC_INFO.phoneTel}
+                  className="text-slate-200 hover:text-teal-400 transition-colors font-medium font-mono text-sm"
+                >
+                  {CLINIC_INFO.phoneDisplay}
+                </a>
+              </div>
+            </div>
+
+            <div className="pt-1 flex flex-col space-y-2 text-sm text-slate-400">
               <span className="font-semibold text-slate-300">Connect with us on Instagram:</span>
               <div className="flex flex-wrap items-center gap-4">
                 {CLINIC_INFO.instagram.map((item) => (
@@ -111,7 +131,7 @@ export const Footer: React.FC = () => {
 
             <div className="mt-8 pt-6 border-t border-slate-800">
               <Link
-                to="/contact"
+                to={CONSULTATION_PATH}
                 className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white text-base font-semibold px-6 py-3.5 rounded-lg shadow-sm transition-all duration-150"
               >
                 <span>Request a Consultation</span>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
+import { CONSULTATION_PATH } from '../data/clinicalData';
 import heroImg from '../assets/hero-rehab.jpg';
 
 export const Hero: React.FC = () => {
@@ -57,7 +58,7 @@ export const Hero: React.FC = () => {
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-10"
             >
               <Link
-                to="/contact"
+                to={CONSULTATION_PATH}
                 className="animate-hero-fade-up group inline-flex items-center justify-center gap-2.5 bg-teal-700 hover:bg-teal-800 text-white font-bold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press text-base text-center min-h-[48px]"
                 style={{ animationDelay: '360ms' }}
               >

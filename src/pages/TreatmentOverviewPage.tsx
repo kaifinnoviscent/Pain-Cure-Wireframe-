@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, MapPin } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { CLINIC_INFO, TREATMENTS } from '../data/clinicalData';
+import { CLINIC_INFO, TREATMENTS, CONSULTATION_PATH } from '../data/clinicalData';
 import spineImg from '../assets/spine-care.jpg';
 import kneeImg from '../assets/knee-treatment.jpg';
 import hipImg from '../assets/hip-treatment.jpg';
@@ -51,7 +51,7 @@ export const TreatmentOverviewPage: React.FC = () => {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
-                  to="/contact"
+                  to={CONSULTATION_PATH}
                   className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-xl shadow-card transition-all duration-150 text-base"
                 >
                   <span>Request a Consultation</span>
@@ -492,7 +492,7 @@ export const TreatmentOverviewPage: React.FC = () => {
 
               <div className="mb-14">
                 <Link
-                  to="/contact"
+                  to={CONSULTATION_PATH}
                   className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-xl shadow-card transition-all duration-150 text-base"
                 >
                   <span>Request a Consultation</span>

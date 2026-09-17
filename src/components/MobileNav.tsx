@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { X, ArrowRight, Instagram, ChevronDown } from 'lucide-react';
-import { CLINIC_INFO } from '../data/clinicalData';
+import { CLINIC_INFO, CONSULTATION_PATH } from '../data/clinicalData';
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -10,6 +10,7 @@ interface MobileNavProps {
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, returnFocusRef }) => {
+  const location = useLocation();
   const [treatmentsExpanded, setTreatmentsExpanded] = useState(true);
   const drawerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -189,8 +190,16 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, returnFoc
         {/* Bottom CTA & Social */}
         <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col space-y-4">
           <Link
-            to="/contact"
-            onClick={onClose}
+            to={CONSULTATION_PATH}
+            onClick={() => {
+              onClose();
+              if (location.pathname === '/contact') {
+                const element = document.getElementById('consultation');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }
+            }}
             className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 shadow-sm min-h-[48px] text-sm"
           >
             <span>Request a Consultation</span>
