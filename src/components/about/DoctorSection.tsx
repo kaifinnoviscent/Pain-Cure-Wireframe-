@@ -11,25 +11,10 @@ export const DoctorSection: React.FC<DoctorSectionProps> = ({ isActive = true })
   return (
     <section
       id="doctor"
-      className="w-full bg-white scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 pt-8 pb-10 sm:pt-10 sm:pb-12 lg:pt-12 lg:pb-14 border-b border-slate-200/80"
+      className="w-full bg-white scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 pt-8 pb-6 sm:pt-10 sm:pb-7 lg:pt-12 lg:pb-8 border-b border-slate-200/80"
       aria-label={`Clinical Leadership: ${DOCTOR_PROFILE.name}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header Marker */}
-        <div 
-          className={`flex items-center gap-4 pb-4 border-b border-slate-200/80 mb-6 sm:mb-8 transition-all ${
-            isActive 
-              ? 'duration-500 ease-out delay-0 opacity-100 translate-y-0' 
-              : 'duration-200 ease-in delay-0 opacity-0 translate-y-5'
-          }`}
-        >
-          <span className="text-xs sm:text-sm font-bold tracking-wider text-teal-900 uppercase">
-            01 &mdash; CLINICAL LEADERSHIP &amp; FOUNDER
-          </span>
-          <div className="h-px bg-slate-200 flex-grow" aria-hidden="true" />
-        </div>
-
         {/* Primary Doctor Hero / Opening Lockup: Balanced 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-14 items-center">
           
@@ -157,7 +142,7 @@ export const DoctorSection: React.FC<DoctorSectionProps> = ({ isActive = true })
         {/* Detailed Surgical Experience & Clinical Expertise Subsection */}
         <div 
           id="clinical-expertise" 
-          className={`pt-7 sm:pt-8 mt-7 sm:mt-8 border-t border-slate-200/80 scroll-mt-28 transition-all ${
+          className={`pt-6 sm:pt-7 mt-6 sm:mt-7 border-t border-slate-200/80 scroll-mt-28 transition-all ${
             isActive 
               ? 'duration-600 ease-out delay-[240ms] opacity-100 translate-y-0' 
               : 'duration-200 ease-in delay-0 opacity-0 translate-y-5'

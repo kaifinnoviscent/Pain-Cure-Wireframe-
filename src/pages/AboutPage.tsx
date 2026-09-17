@@ -68,7 +68,7 @@ export const AboutPage: React.FC = () => {
         {/* Clinic Positioning & Integrated Care Model Section */}
         <section 
           id="clinic-positioning" 
-          className="py-10 sm:py-12 bg-slate-50/60 border-b border-slate-200/80 overflow-hidden"
+          className="scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 py-6 sm:py-8 lg:py-9 bg-slate-50/60 border-b border-slate-200/80 overflow-hidden"
           aria-label="About Pain Cure Ortho & Rehab Clinic"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,13 +76,6 @@ export const AboutPage: React.FC = () => {
               
               {/* Left Column: Clinic Identity & Core Mission */}
               <div className="lg:col-span-6 animate-hero-fade-up">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-50 border border-teal-200/80 mb-3 sm:mb-4">
-                  <span className="w-2 h-2 rounded-full bg-teal-600" aria-hidden="true" />
-                  <span className="text-xs font-bold tracking-wider text-teal-900 uppercase">
-                    ABOUT PAIN CURE ORTHO &amp; REHAB
-                  </span>
-                </div>
-
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-[1.18] sm:leading-[1.12] mb-3 sm:mb-4">
                   Orthopedic Care Focused on Understanding Pain and Recovery
                 </h1>
@@ -95,7 +88,7 @@ export const AboutPage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6">
                   <a
                     href="#approach"
-                    className="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-bold px-5 py-3 rounded-xl shadow-xs hover:shadow-card-hover transition-all duration-150 active:scale-[0.99] touch-target min-h-[44px] text-sm sm:text-base group"
+                    className="inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-bold px-5 py-3 rounded-xl shadow-xs hover:shadow-card-hover transition-all duration-150 active:scale-[0.99] touch-target min-h-[44px] text-sm sm:text-base group focus-visible:outline-teal-600"
                   >
                     <Compass className="w-4 h-4 text-white" />
                     <span>Our Clinical Approach</span>
@@ -104,7 +97,7 @@ export const AboutPage: React.FC = () => {
 
                   <Link
                     to={CONSULTATION_PATH}
-                    className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 hover:text-navy-900 font-semibold px-5 py-3 rounded-xl border border-slate-200/90 transition-colors touch-target min-h-[44px] text-sm sm:text-base group"
+                    className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 hover:text-navy-900 font-semibold px-5 py-3 rounded-xl border border-slate-200/90 transition-colors touch-target min-h-[44px] text-sm sm:text-base group focus-visible:outline-teal-600"
                   >
                     <PhoneCall className="w-4 h-4 text-teal-700" />
                     <span>Request Consultation</span>

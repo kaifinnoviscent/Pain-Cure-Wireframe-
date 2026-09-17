@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, Instagram, Shield, MapPin, Phone, Clock } from 'lucide-react';
 import { CLINIC_INFO, CONSULTATION_PATH } from '../data/clinicalData';
 const logoUrl = '/pain-cure-og.png';
 
 export const Footer: React.FC = () => {
+  const location = useLocation();
+
   const treatments = [
     { name: 'Spine', slug: '/treatments/spine' },
     { name: 'Knee', slug: '/treatments/knee' },
@@ -29,7 +31,16 @@ export const Footer: React.FC = () => {
           
           {/* Brand & Clinic Statement (5 cols) */}
           <div className="md:col-span-5 space-y-6">
-            <Link to="/" className="inline-block bg-white p-4 sm:p-5 rounded-2xl shadow-sm" aria-label="Pain Cure Home">
+            <Link
+              to="/"
+              onClick={() => {
+                if (location.pathname === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+              className="inline-block bg-white p-4 sm:p-5 rounded-2xl shadow-sm focus-visible:outline-teal-400"
+              aria-label="Pain Cure Ortho & Rehab Clinic — Home"
+            >
               <img
                 src={logoUrl}
                 alt="Pain Cure Ortho &amp; Rehab Clinic"
@@ -140,7 +151,15 @@ export const Footer: React.FC = () => {
             <div className="mt-8 pt-6 border-t border-slate-800">
               <Link
                 to={CONSULTATION_PATH}
-                className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white text-base font-semibold px-6 py-3.5 rounded-lg shadow-sm transition-all duration-150"
+                onClick={() => {
+                  if (location.pathname === '/contact') {
+                    const element = document.getElementById('consultation');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }
+                }}
+                className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white text-base font-semibold px-6 py-3.5 rounded-lg shadow-sm transition-all duration-150 focus-visible:outline-teal-400"
               >
                 <span>Request a Consultation</span>
                 <ArrowRight className="w-4 h-4" />

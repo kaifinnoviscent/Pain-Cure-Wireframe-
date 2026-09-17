@@ -200,7 +200,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, returnFoc
                 }
               }
             }}
-            className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 shadow-sm min-h-[48px] text-sm"
+            className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 shadow-sm min-h-[48px] text-sm focus-visible:outline-teal-600"
           >
             <span>Request a Consultation</span>
             <ArrowRight className="w-4 h-4" />

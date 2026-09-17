@@ -52,7 +52,7 @@ export const TreatmentOverviewPage: React.FC = () => {
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
                   to={CONSULTATION_PATH}
-                  className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-xl shadow-card transition-all duration-150 text-base"
+                  className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-xl shadow-card transition-all duration-150 text-base focus-visible:outline-teal-600"
                 >
                   <span>Request a Consultation</span>
                   <ArrowRight className="w-4 h-4" />
@@ -504,7 +504,7 @@ export const TreatmentOverviewPage: React.FC = () => {
               <div className="mb-8 sm:mb-10">
                 <Link
                   to={CONSULTATION_PATH}
-                  className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-xl shadow-card transition-all duration-150 text-base"
+                  className="inline-flex items-center gap-2.5 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-xl shadow-card transition-all duration-150 text-base focus-visible:outline-teal-600"
                 >
                   <span>Request a Consultation</span>
                   <ArrowRight className="w-4 h-4" />

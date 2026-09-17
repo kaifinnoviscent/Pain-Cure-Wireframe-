@@ -11,26 +11,12 @@ export const PainCureSection: React.FC<PainCureSectionProps> = ({ isActive = tru
   return (
     <section
       id="pain-cure"
-      className="w-full bg-navy-950 text-white scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 py-10 sm:py-12"
+      className="w-full bg-navy-950 text-white scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 py-7 sm:py-8 lg:py-9"
       aria-label="Pain Cure: Orthopedic Treatment and Rehabilitation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Main Content */}
         <div className="min-w-0">
-            {/* Section Header */}
-            <div 
-              className={`flex items-center gap-4 pb-4 border-b border-white/15 mb-6 sm:mb-8 transition-all ${
-                isActive 
-                  ? 'duration-500 ease-out delay-0 opacity-100 translate-y-0' 
-                  : 'duration-200 ease-in delay-0 opacity-0 translate-y-5'
-              }`}
-            >
-              <span className="text-xs sm:text-sm font-bold tracking-wider text-teal-300 uppercase">
-                03 &mdash; PAIN CURE
-              </span>
-              <div className="h-px bg-white/15 flex-grow" aria-hidden="true" />
-            </div>
-
             {/* Narrative Block */}
             <div className="max-w-3xl mb-7 sm:mb-9">
               <span className="text-xs font-bold tracking-wider text-teal-300 uppercase block mb-3">

@@ -1,11 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, Phone, MapPin, Clock } from 'lucide-react';
 import { CLINIC_INFO, CONSULTATION_PATH } from '../data/clinicalData';
 import { useInView } from '../hooks/useInView';
 
 export const ConsultationCTA: React.FC = () => {
   const [sectionRef, isInView] = useInView<HTMLElement>({ threshold: 0.1 });
+  const location = useLocation();
+
+  const handleConsultationClick = () => {
+    if (location.pathname === '/contact') {
+      const element = document.getElementById('consultation');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <section 
@@ -49,7 +59,8 @@ export const ConsultationCTA: React.FC = () => {
               <div className="mb-7 sm:mb-8">
                 <Link
                   to={CONSULTATION_PATH}
-                  className="group inline-flex items-center justify-center gap-3 bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-teal-500/25 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press text-sm sm:text-base min-h-[48px]"
+                  onClick={handleConsultationClick}
+                  className="group inline-flex items-center justify-center gap-3 bg-teal-500 hover:bg-teal-400 text-navy-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-teal-500/25 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press text-sm sm:text-base min-h-[48px] focus-visible:outline-teal-400"
                 >
                   <span>Request a Consultation</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

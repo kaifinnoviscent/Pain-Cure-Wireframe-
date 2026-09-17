@@ -47,7 +47,7 @@ export const SportsInjuryPage: React.FC = () => {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     to={CONSULTATION_PATH}
-                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-lg shadow-sm transition-all duration-150 text-sm sm:text-base"
+                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-lg shadow-sm transition-all duration-150 text-sm sm:text-base focus-visible:outline-teal-600"
                   >
                     <span>Consult on Sports Injury</span>
                     <ArrowRight className="w-4 h-4" />

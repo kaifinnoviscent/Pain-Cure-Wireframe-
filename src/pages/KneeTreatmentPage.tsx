@@ -47,7 +47,7 @@ export const KneeTreatmentPage: React.FC = () => {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     to={CONSULTATION_PATH}
-                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-card transition-all duration-150 text-sm sm:text-base"
+                    className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-card transition-all duration-150 text-sm sm:text-base focus-visible:outline-teal-600"
                   >
                     <span>Consult on Knee Care</span>
                     <ArrowRight className="w-4 h-4" />
@@ -202,7 +202,7 @@ export const KneeTreatmentPage: React.FC = () => {
                 <div className="mt-5 pt-4 border-t border-slate-100">
                   <Link
                     to={CONSULTATION_PATH}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-teal-800 hover:text-teal-950 group"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-teal-800 hover:text-teal-950 group focus-visible:outline-teal-600"
                   >
                     <span>Discuss Knee Treatment with Our Team</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

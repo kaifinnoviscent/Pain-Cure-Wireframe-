@@ -31,26 +31,12 @@ export const ApproachSection: React.FC<ApproachSectionProps> = ({ isActive = tru
   return (
     <section
       id="approach"
-      className="w-full bg-[#E6F3EF] border-y border-teal-200/80 scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 py-10 sm:py-12 text-slate-800"
+      className="w-full bg-[#E6F3EF] border-y border-teal-200/80 scroll-mt-[136px] sm:scroll-mt-[144px] xl:scroll-mt-28 py-7 sm:py-8 lg:py-9 text-slate-800"
       aria-label="Our Approach to Pain Care"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Main Content */}
         <div className="min-w-0">
-            {/* Section Header */}
-            <div 
-              className={`flex items-center gap-4 pb-4 border-b border-teal-200 mb-6 sm:mb-8 transition-all ${
-                isActive 
-                  ? 'duration-500 ease-out delay-0 opacity-100 translate-y-0' 
-                  : 'duration-200 ease-in delay-0 opacity-0 translate-y-5'
-              }`}
-            >
-              <span className="text-xs sm:text-sm font-bold tracking-wider text-teal-900 uppercase">
-                02 &mdash; OUR APPROACH
-              </span>
-              <div className="h-px bg-teal-200 flex-grow" aria-hidden="true" />
-            </div>
-
             {/* Narrative Block */}
             <div className="max-w-3xl mb-7 sm:mb-9">
               <span className="text-xs font-bold tracking-wider text-teal-900 uppercase block mb-3">

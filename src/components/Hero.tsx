@@ -59,7 +59,7 @@ export const Hero: React.FC = () => {
             >
               <Link
                 to={CONSULTATION_PATH}
-                className="animate-hero-fade-up group inline-flex items-center justify-center gap-2.5 bg-teal-700 hover:bg-teal-800 text-white font-bold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press text-base text-center min-h-[48px]"
+                className="animate-hero-fade-up group inline-flex items-center justify-center gap-2.5 bg-teal-700 hover:bg-teal-800 text-white font-bold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press text-base text-center min-h-[48px] focus-visible:outline-teal-600"
                 style={{ animationDelay: '360ms' }}
               >
                 <span>Request a Consultation</span>
@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
 
               <Link
                 to="/treatments"
-                className="animate-hero-fade-up group inline-flex items-center justify-center gap-2 bg-white hover:bg-teal-50/60 text-navy-900 font-bold px-6 py-3.5 rounded-xl border-2 border-slate-200 hover:border-teal-500 shadow-2xs hover:shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press text-base text-center min-h-[48px]"
+                className="animate-hero-fade-up group inline-flex items-center justify-center gap-2 bg-white hover:bg-teal-50/60 text-navy-900 font-bold px-6 py-3.5 rounded-xl border-2 border-slate-200 hover:border-teal-500 shadow-2xs hover:shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] touch-target touch-press text-base text-center min-h-[48px] focus-visible:outline-teal-600"
                 style={{ animationDelay: '420ms' }}
               >
                 <span>Explore Treatments</span>

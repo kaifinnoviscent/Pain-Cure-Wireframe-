@@ -118,8 +118,13 @@ export const Header: React.FC = () => {
           {/* Logo & Brand Identity */}
           <Link
             to="/"
+            onClick={() => {
+              if (location.pathname === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
             className="flex items-center gap-3 focus-visible:outline-teal-600 rounded-md group"
-            aria-label="Pain Cure Ortho & Rehab Clinic Home"
+            aria-label="Pain Cure Ortho & Rehab Clinic — Home"
           >
             <img
               src={logoUrl}
@@ -284,7 +289,8 @@ export const Header: React.FC = () => {
             <Link
               to={CONSULTATION_PATH}
               onClick={handleConsultationClick}
-              className="bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold px-3.5 py-2.5 rounded-xl touch-target flex items-center justify-center shadow-xs"
+              className="bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold px-3.5 py-2.5 rounded-xl touch-target flex items-center justify-center shadow-xs focus-visible:outline-teal-600"
+              aria-label="Request a Consultation"
             >
               Consult
             </Link>
